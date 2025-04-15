@@ -19,9 +19,9 @@ import { Link as RouterLink } from 'react-router-dom';
 import { FaBroadcastTower, FaCheckCircle, FaArrowRight } from 'react-icons/fa';
 import torre2 from '../../../assets/torre2.png';
 import greenfield2 from '../../../assets/greenfield2.jpeg';
-import rooftop1 from '../../../assets/rooftop1.JPG';
 import rooftop2 from '../../../assets/rooftop2.jpg';
 import rooftop3 from '../../../assets/rooftop3.jpeg';
+import starlink1 from '../../../assets/starlink1.jpg';
 
 const MotionBox = motion(Box);
 
@@ -185,7 +185,7 @@ const SitesConstruction = () => {
                   shadow="xl"
                 >
                   <Image
-                    src={rooftop1}
+                    src={starlink1}
                     alt="Site em Rooftop"
                     w="100%"
                     h="100%"

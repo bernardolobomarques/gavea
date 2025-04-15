@@ -1,6 +1,6 @@
 import { Container, Heading, Text, VStack, Image, SimpleGrid, Box, Icon, Flex, useColorModeValue } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
-import { FaUserShield, FaCalendarCheck, FaUserTie, FaThumbsUp, FaLightbulb, FaBuilding, FaSignal, FaHammer, FaNetworkWired, FaBuilding as FaBuildingIcon } from 'react-icons/fa';
+import { FaUserShield, FaCalendarCheck, FaUserTie, FaThumbsUp, FaLightbulb, FaBuilding, FaSignal, FaHammer, FaNetworkWired, FaBuilding as FaBuildingIcon, FaLeaf } from 'react-icons/fa';
 import logoGavea from '../../assets/logoGavea.png';
 import torre2 from '../../assets/torre2.png';
 
@@ -75,7 +75,8 @@ const About = () => {
     { icon: FaCalendarCheck, text: "Integridade: Agimos com ética e transparência." },
     { icon: FaUserTie, text: "Profissionalismo: Oferecemos soluções de alto padrão." },
     { icon: FaThumbsUp, text: "Qualidade: Buscamos a excelência em cada projeto." },
-    { icon: FaLightbulb, text: "Inovação: Desenvolvemos soluções inteligentes." }
+    { icon: FaLightbulb, text: "Inovação: Desenvolvemos soluções inteligentes." },
+    { icon: FaLeaf, text: "Respeito ao meio ambiente: Comprometidos com a sustentabilidade." }
   ];
 
   return (
