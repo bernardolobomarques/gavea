@@ -81,11 +81,11 @@ const LocationAcquisition = () => {
             <Flex align="center" gap={4}>
               <Icon as={FaSearchLocation} w={10} h={10} />
               <Heading as="h1" size="2xl">
-                Aquisição de Locais
+                Busca e Negociação de Locais
               </Heading>
             </Flex>
             <Text fontSize="xl" maxW="700px">
-              Identificação e aquisição estratégica de locais para implementação de
+              Identificação e negociação estratégica de locais para implementação de
               infraestrutura de telecomunicações.
             </Text>
           </VStack>

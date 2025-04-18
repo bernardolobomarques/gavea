@@ -123,7 +123,7 @@ const Services = () => {
     },
     {
       icon: FaSearchLocation,
-      title: 'Aquisição de Locais',
+      title: 'Busca e Negociação de Locais',
       description: 'Identificação e aquisição estratégica de locais para implementação.',
       features: [
         'Análise de viabilidade',

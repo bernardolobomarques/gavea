@@ -25,9 +25,9 @@ const Header = () => {
   const serviceItems = [
     { path: '/services/small-cell', label: 'Instalação de Small Cell' },
     { path: '/services/sites-construction', label: 'Construção de Sites' },
-    { path: '/services/location-acquisition', label: 'Aquisição de Locais' },
+    { path: '/services/location-acquisition', label: 'Busca e Negociação de Locais' },
     { path: '/services/licensing', label: 'Licenciamento' },
-    { path: '/services/maintenance', label: 'Manutenção' },
+    { path: '/services/maintenance', label: 'Manutenção Corretiva' },
     { path: '/services/technical-consulting', label: 'Consultoria Técnica' },
   ];
 
@@ -127,13 +127,13 @@ const Header = () => {
             <Link
               as={RouterLink}
               to="/services"
-              display="flex"
-              alignItems="center"
               fontSize={isScrolled ? 'sm' : 'md'}
               fontWeight="500"
               color={isScrolled ? 'white' : 'rgba(42,82,118,255)'}
               position="relative"
-              pb={2}
+              display="inline-flex"
+              alignItems="center"
+              h="100%"
               _hover={{
                 textDecoration: 'none',
                 _after: {
@@ -143,7 +143,7 @@ const Header = () => {
               _after={{
                 content: '""',
                 position: 'absolute',
-                bottom: '0',
+                bottom: '-2px',
                 left: '0',
                 width: isServicePath ? '100%' : '0%',
                 height: '2px',
@@ -159,7 +159,8 @@ const Header = () => {
               top="100%"
               left="50%"
               transform="translateX(-50%)"
-              pt={3}
+              pt={1}
+              mt={1}
               zIndex={1001}
               opacity={isOpen ? 1 : 0}
               visibility={isOpen ? "visible" : "hidden"}

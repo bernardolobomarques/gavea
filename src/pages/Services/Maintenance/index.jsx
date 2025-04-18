@@ -22,7 +22,7 @@ const MotionBox = motion(Box);
 
 const Maintenance = () => {
   const benefits = [
-    'Manutenção preventiva programada',
+    'Manutenção corretiva especializada',
     'Atendimento 24/7 para emergências',
     'Equipe técnica especializada',
     'Relatórios detalhados',
@@ -32,11 +32,11 @@ const Maintenance = () => {
 
   const services = [
     {
-      title: 'Manutenção Preventiva',
-      description: 'Inspeções regulares e manutenção programada para prevenir falhas e maximizar performance.'
+      title: 'Manutenção Corretiva',
+      description: 'Inspeções regulares e manutenção programada para garantir o funcionamento ideal dos equipamentos.'
     },
     {
-      title: 'Manutenção Corretiva',
+      title: 'Atendimento Emergencial',
       description: 'Pronto atendimento para correção de falhas e restauração de serviços.'
     },
     {
@@ -44,7 +44,7 @@ const Maintenance = () => {
       description: 'Atualização e modernização de infraestrutura para melhor performance.'
     },
     {
-      title: 'Monitoramento',
+      title: 'Análise e Avaliação',
       description: 'Acompanhamento contínuo do funcionamento dos equipamentos e sistemas.'
     }
   ];

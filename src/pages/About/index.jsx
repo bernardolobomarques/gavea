@@ -221,7 +221,7 @@ const About = () => {
                 textAlign="center"
               >
                 <Text fontSize="xl" color="rgba(42,82,118,1)" fontWeight="bold">
-                  Junte-se à Gávea Telecomunicações em nossa jornada de conectar o futuro com confiança e sustentabilidade!
+                  Junte-se à Gávea em nossa jornada de conectar o futuro com confiança e sustentabilidade!
                 </Text>
               </MotionBox>
             </VStack>

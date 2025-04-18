@@ -2,7 +2,7 @@ import { Box, Button, Container, Flex, Grid, Heading, Icon, Image, SimpleGrid, S
 import { FaBuilding, FaBroadcastTower, FaUserCheck, FaUsers, FaUserTie, FaClipboardCheck, FaWifi, FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock, FaWhatsapp, FaArrowRight } from 'react-icons/fa';
 import { Link as RouterLink } from 'react-router-dom';
 import { useState, useEffect, useRef } from 'react';
-import torreHome from '../../assets/torreHome.jpg';
+import torreHome from '../../assets/torreHome.png';
 import torre1 from '../../assets/torre1.jpg';
 
 const useInView = (options = {}) => {
@@ -268,14 +268,16 @@ const Home = () => {
               fontWeight="bold"
               lineHeight="1.2"
               letterSpacing="tight"
+              color="white"
             >
-              Líderes em infraestrutura para Small Cell
+              Referencia em infraestrutura e comunicações
             </Heading>
             <Text
               fontSize={{ base: "xl", md: "2xl" }}
               mb={12}
               maxW="700px"
               lineHeight="1.6"
+              color="white"
             >
               A Gávea foca nos serviços de construção civil e elétrica com larga experiência em sites Indoor, roof top e instalação de small cell's em equipamentos urbanos e fachadas, inclusive desenvolvimento de soluções, aquisição e licenciamento.
             </Text>
@@ -382,8 +384,8 @@ const Home = () => {
               />
               <ServiceCard
                 icon={FaClipboardCheck}
-                title="Licenciamento & Aquisição"
-                description="Suporte completo em processos de licenciamento e aquisição de locais para implementação de infraestrutura."
+                title="Licenciamento & Busca"
+                description="Suporte completo em processos de licenciamento e busca e negociação de locais para implementação de infraestrutura."
                 path="/services/licensing"
               />
               <ServiceCard
