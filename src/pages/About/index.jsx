@@ -29,20 +29,27 @@ const ActivityCard = ({ icon, title, description }) => {
   );
 };
 
-const ValueCard = ({ icon, text }) => {
+const ValueCard = ({ icon, title, description }) => {
   return (
-    <MotionFlex
-      align="center"
-      p={4}
-      borderRadius="md"
+    <MotionBox
+      p={6}
+      borderRadius="lg"
       bg="white"
-      shadow="sm"
-      whileHover={{ scale: 1.05 }}
+      shadow="md"
+      whileHover={{ scale: 1.02 }}
       transition={{ duration: 0.2 }}
+      height="100%"
     >
-      <Icon as={icon} w={6} h={6} color="rgba(42,82,118,1)" mr={3} />
-      <Text color="gray.700">{text}</Text>
-    </MotionFlex>
+      <VStack spacing={4} align="center">
+        <Icon as={icon} w={8} h={8} color="rgba(42,82,118,1)" />
+        <Heading size="md" textAlign="center" color="rgba(42,82,118,1)">
+          {title}
+        </Heading>
+        <Text textAlign="center" color="gray.600">
+          {description}
+        </Text>
+      </VStack>
+    </MotionBox>
   );
 };
 
@@ -71,12 +78,36 @@ const About = () => {
   ];
 
   const values = [
-    { icon: FaUserShield, text: "Segurança: Priorizamos a integridade de todos." },
-    { icon: FaCalendarCheck, text: "Integridade: Agimos com ética e transparência." },
-    { icon: FaUserTie, text: "Profissionalismo: Oferecemos soluções de alto padrão." },
-    { icon: FaThumbsUp, text: "Qualidade: Buscamos a excelência em cada projeto." },
-    { icon: FaLightbulb, text: "Inovação: Desenvolvemos soluções inteligentes." },
-    { icon: FaLeaf, text: "Respeito ao meio ambiente: Comprometidos com a sustentabilidade." }
+    { 
+      icon: FaUserShield, 
+      title: "Segurança", 
+      description: "Priorizamos a integridade física e bem-estar de todos os nossos colaboradores e parceiros em cada projeto." 
+    },
+    { 
+      icon: FaCalendarCheck, 
+      title: "Integridade", 
+      description: "Mantemos os mais altos padrões éticos em nossas operações, com total transparência em nossas relações." 
+    },
+    { 
+      icon: FaUserTie, 
+      title: "Profissionalismo", 
+      description: "Entregamos soluções de alto padrão com uma equipe altamente qualificada e comprometida." 
+    },
+    { 
+      icon: FaThumbsUp, 
+      title: "Qualidade", 
+      description: "Buscamos a excelência em cada detalhe, garantindo resultados superiores em todos os projetos." 
+    },
+    { 
+      icon: FaLightbulb, 
+      title: "Inovação", 
+      description: "Desenvolvemos soluções inteligentes e criativas para os desafios mais complexos do setor." 
+    },
+    { 
+      icon: FaLeaf, 
+      title: "Sustentabilidade", 
+      description: "Comprometidos com práticas sustentáveis e respeito ao meio ambiente em todas as nossas operações." 
+    }
   ];
 
   return (
@@ -196,21 +227,27 @@ const About = () => {
               </SimpleGrid>
 
               {/* Nossos Valores */}
-              <VStack spacing={8}>
+              <VStack spacing={8} w="full">
                 <Heading as="h3" size="lg" color="rgba(42,82,118,1)">Nossos valores</Heading>
-                <VStack spacing={4} w="full">
+                <SimpleGrid 
+                  columns={{ base: 1, md: 2 }} 
+                  spacing={6}
+                  w="full"
+                  px={4}
+                  maxW="1100px"
+                  mx="auto"
+                >
                   {values.map((value, index) => (
                     <MotionBox
                       key={index}
-                      w="full"
-                      initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                      animate={{ opacity: 1, x: 0 }}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.5, delay: index * 0.1 }}
                     >
                       <ValueCard {...value} />
                     </MotionBox>
                   ))}
-                </VStack>
+                </SimpleGrid>
               </VStack>
 
               {/* Chamada Final */}
