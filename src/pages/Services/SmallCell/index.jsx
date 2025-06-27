@@ -20,10 +20,13 @@ import { FaWifi, FaCheckCircle, FaArrowRight } from 'react-icons/fa';
 import torre2 from '../../../assets/torre2.png';
 import infraestrutura1 from '../../../assets/infraestrutura1.jpg';
 import infraestrutura2 from '../../../assets/infraestrutura2.jpg';
+import { useTranslation } from '../../../hooks/useTranslation';
 
 const MotionBox = motion(Box);
 
 const SmallCell = () => {
+  const { t } = useTranslation();
+  
   const benefits = [
     'Melhor cobertura em áreas urbanas densas',
     'Otimização da capacidade de rede',
@@ -80,12 +83,11 @@ const SmallCell = () => {
             <Flex align="center" gap={4}>
               <Icon as={FaWifi} w={10} h={10} />
               <Heading as="h1" size="2xl">
-                Instalação de Small Cell
+                {t.servicePages.smallCell.title}
               </Heading>
             </Flex>
             <Text fontSize="xl" maxW="700px">
-              Soluções completas para instalação de small cells em ambientes diversos,
-              garantindo cobertura e performance em áreas estratégicas.
+              {t.servicePages.smallCell.subtitle}
             </Text>
           </VStack>
         </Container>
@@ -101,17 +103,14 @@ const SmallCell = () => {
                 Visão Geral
               </Heading>
               <Text fontSize="lg" color="gray.600">
-                Nossa expertise em instalação de small cells abrange desde a análise inicial
-                do local até a implementação e otimização final. Trabalhamos com as mais
-                recentes tecnologias e métodos de instalação, garantindo cobertura eficiente
-                e integração harmoniosa com o ambiente urbano.
+                {t.servicePages.smallCell.description}
               </Text>
             </VStack>
 
             {/* Benefits Section */}
             <VStack spacing={6} align="stretch" w="full">
               <Heading size="lg" color="rgba(42,82,118,1)">
-                Benefícios
+                {t.servicePages.smallCell.benefits.title}
               </Heading>
               <List spacing={3}>
                 {benefits.map((benefit, index) => (

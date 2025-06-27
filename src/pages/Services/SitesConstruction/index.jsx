@@ -18,6 +18,7 @@ import { motion } from 'framer-motion';
 import { Link as RouterLink } from 'react-router-dom';
 import { FaBroadcastTower, FaCheckCircle, FaArrowRight } from 'react-icons/fa';
 import torre2 from '../../../assets/torre2.png';
+import { useTranslation } from '../../../hooks/useTranslation';
 import greenfield2 from '../../../assets/greenfield2.jpeg';
 import rooftop2 from '../../../assets/rooftop2.jpg';
 import rooftop3 from '../../../assets/rooftop3.jpeg';

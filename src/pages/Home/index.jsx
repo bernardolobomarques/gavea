@@ -4,6 +4,7 @@ import { Link as RouterLink } from 'react-router-dom';
 import { useState, useEffect, useRef } from 'react';
 import torreHome from '../../assets/torreHome.png';
 import torre1 from '../../assets/torre1.jpg';
+import { useTranslation } from '../../hooks/useTranslation';
 
 const useInView = (options = {}) => {
   const [isInView, setIsInView] = useState(false);
@@ -182,6 +183,7 @@ const ContactInfo = ({ icon, text }) => {
 const Home = () => {
   const toast = useToast();
   const [scrollY, setScrollY] = useState(0);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -196,7 +198,7 @@ const Home = () => {
     e.preventDefault();
     try {
       toast({
-        title: 'Mensagem enviada!',
+        title: t.home.contact.success,
         description: 'Entraremos em contato em breve.',
         status: 'success',
         duration: 5000,
@@ -204,8 +206,8 @@ const Home = () => {
       });
     } catch (error) {
       toast({
-        title: 'Erro',
-        description: 'Ocorreu um erro ao enviar sua mensagem. Por favor, tente novamente.',
+        title: t.common.error,
+        description: t.home.contact.error,
         status: 'error',
         duration: 5000,
         isClosable: true,
@@ -270,7 +272,7 @@ const Home = () => {
               letterSpacing="tight"
               color="white"
             >
-              Referencia em infraestrutura e comunicações
+              {t.home.hero.title}
             </Heading>
             <Text
               fontSize={{ base: "xl", md: "2xl" }}
@@ -279,7 +281,7 @@ const Home = () => {
               lineHeight="1.6"
               color="white"
             >
-              A Gávea foca nos serviços de construção civil e elétrica com larga experiência em sites Indoor, roof top e instalação de small cell's em equipamentos urbanos e fachadas, inclusive desenvolvimento de soluções, aquisição e licenciamento.
+              {t.home.hero.subtitle}
             </Text>
             <Stack direction={{base: 'column', sm: 'row'}} spacing={6}>
               <Button
@@ -297,7 +299,7 @@ const Home = () => {
                 }}
                 transition="all 0.3s"
               >
-                Entre em contato
+                {t.home.hero.contact}
               </Button>
               <Button
                 as={RouterLink}
@@ -315,7 +317,32 @@ const Home = () => {
                 }}
                 transition="all 0.3s"
               >
-                Nossos Serviços
+                {t.home.hero.cta}
+              </Button>
+              
+              {/* WhatsApp Button */}
+              <Button
+                as="a"
+                href={`https://wa.me/5521971984430?text=${encodeURIComponent(t.isEnglish ? 'Hello! I saw your website and would like to know more about your telecommunications services.' : 'Olá! Vi seu site e gostaria de saber mais sobre seus serviços de telecomunicações.')}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                size="lg"
+                bg="green.500"
+                color="white"
+                leftIcon={<Icon as={FaWhatsapp} w={5} h={5} />}
+                px={8}
+                py={6}
+                fontSize="lg"
+                _hover={{
+                  bg: 'green.600',
+                  transform: 'translateY(-2px)',
+                  boxShadow: '0 8px 25px rgba(34, 197, 94, 0.3)'
+                }}
+                transition="all 0.3s"
+                borderRadius="full"
+                boxShadow="0 4px 15px rgba(34, 197, 94, 0.2)"
+              >
+                WhatsApp
               </Button>
             </Stack>
           </Flex>
@@ -326,22 +353,22 @@ const Home = () => {
       <Box py={20} bg={useColorModeValue('gray.50', 'gray.900')}>
         <Container maxW="1200px">
           <VStack spacing={12}>
-            <Heading textAlign="center">Nossos diferenciais</Heading>
+            <Heading textAlign="center">{t.home.features.title}</Heading>
             <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
               <Feature
                 icon={<Icon as={FaBuilding} w={8} h={8} />}
-                title={'Aquisição'}
-                text={'Nossa empresa possui profissionais especializados em aquisição de imóveis para ERBs dos mais variados tipos.'}
+                title={t.home.features.expertise.title}
+                text={t.home.features.expertise.description}
               />
               <Feature
                 icon={<Icon as={FaUserCheck} w={8} h={8} />}
-                title={'Soluções Especializadas'}
-                text={'Desenvolvemos soluções adaptadas nos mais diversos ambientes/locais como monumentos e edificações protegidas.'}
+                title={t.home.features.quality.title}
+                text={t.home.features.quality.description}
               />
               <Feature
                 icon={<Icon as={FaUsers} w={8} h={8} />}
-                title={'Integração Entre Áreas'}
-                text={'Nosso corpo técnico tem profissionais de diversas áreas com expertise nas necessidades das mais variadas etapas.'}
+                title={t.home.features.support.title}
+                text={t.home.features.support.description}
               />
             </SimpleGrid>
           </VStack>
@@ -357,9 +384,9 @@ const Home = () => {
               templateColumns={{ base: '1fr', md: 'repeat(3, 1fr)' }}
               gap={8}
             >
-              <StatCard label="Small cell's instaladas" number="400" />
-              <StatCard label="Sites Executados" number="1000" />
-              <StatCard label="Anos no mercado" number="20" />
+              <StatCard label={t.home.stats.projectsLabel} number={t.home.stats.projectsNumber} />
+              <StatCard label={t.home.stats.clientsLabel} number={t.home.stats.clientsNumber} />
+              <StatCard label={t.home.stats.experienceLabel} number={t.home.stats.experienceNumber} />
             </Grid>
           </VStack>
         </Container>
@@ -370,7 +397,7 @@ const Home = () => {
         <Container maxW="1200px">
           <VStack spacing={12}>
             <VStack spacing={4}>
-              <Heading textAlign="center">Nossos serviços</Heading>
+              <Heading textAlign="center">{t.services.title}</Heading>
               <Text textAlign="center" fontSize="lg" color="gray.600" maxW="700px">
                 Oferecemos uma gama completa de serviços especializados em infraestrutura de telecomunicações
               </Text>

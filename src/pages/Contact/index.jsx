@@ -14,10 +14,16 @@ import {
   Icon,
   Stack,
 } from '@chakra-ui/react';
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock, FaWhatsapp } from 'react-icons/fa';
+import { useTranslation } from '../../hooks/useTranslation';
 
 const Contact = () => {
   const toast = useToast();
+  const { t } = useTranslation();
+
+  const introMessage = t.isEnglish 
+    ? 'Hello! I would like to get in touch about telecommunications services.'
+    : 'Olá! Gostaria de entrar em contato sobre serviços de telecomunicações.';
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -25,7 +31,7 @@ const Contact = () => {
     try {
       // Aqui você pode implementar a lógica de envio do formulário
       toast({
-        title: 'Mensagem enviada!',
+        title: t.contact.form.success,
         description: 'Entraremos em contato em breve.',
         status: 'success',
         duration: 5000,
@@ -33,8 +39,8 @@ const Contact = () => {
       });
     } catch (error) {
       toast({
-        title: 'Erro',
-        description: 'Ocorreu um erro ao enviar sua mensagem. Por favor, tente novamente.',
+        title: t.common.error,
+        description: t.contact.form.error,
         status: 'error',
         duration: 5000,
         isClosable: true,
@@ -45,7 +51,7 @@ const Contact = () => {
   return (
     <Container maxW="1200px" py={10}>
       <VStack spacing={8} align="stretch" mb={8}>
-        <Heading as="h2" size="xl" textAlign="center" color="rgba(42,82,118,255)">Fale Conosco</Heading>
+        <Heading as="h2" size="xl" textAlign="center" color="rgba(42,82,118,255)">{t.contact.title}</Heading>
       </VStack>
 
       <Flex direction={{ base: 'column', lg: 'row' }} gap={8} bg="white" p={8} borderRadius="lg" boxShadow="0 2px 10px rgba(0,0,0,0.1)">
@@ -53,29 +59,72 @@ const Contact = () => {
         <VStack flex="1" align="stretch" spacing={8}>
           <Box>
             <Heading as="h3" size="lg" mb={6} color="rgba(42,82,118,255)">
-              Envie sua mensagem
+              {t.contact.info.title}
             </Heading>
             
             <VStack spacing={4} align="stretch">
               <Flex align="center" gap={3}>
                 <Icon as={FaPhone} color="rgba(42,82,118,255)" />
-                <Text color="rgba(42,82,118,255)">(21) 97198-4430</Text>
+                <Text color="rgba(42,82,118,255)">{t.contact.info.phone.value}</Text>
               </Flex>
               
               <Flex align="center" gap={3}>
                 <Icon as={FaEnvelope} color="rgba(42,82,118,255)" />
-                <Text color="rgba(42,82,118,255)">contato@gaveatelecomunicacoes.com</Text>
+                <Text color="rgba(42,82,118,255)">{t.contact.info.email.value}</Text>
               </Flex>
               
               <Flex align="center" gap={3}>
                 <Icon as={FaMapMarkerAlt} color="rgba(42,82,118,255)" />
-                <Text color="rgba(42,82,118,255)">Avenida Presidente Vargas 590/1309, Rio de Janeiro</Text>
+                <Text color="rgba(42,82,118,255)">{t.contact.info.address.value}</Text>
               </Flex>
               
               <Flex align="center" gap={3}>
                 <Icon as={FaClock} color="rgba(42,82,118,255)" />
-                <Text color="rgba(42,82,118,255)">Segunda - Sexta 9:00 - 17:00</Text>
+                <Text color="rgba(42,82,118,255)">{t.contact.info.hours.value}</Text>
               </Flex>
+            </VStack>
+          </Box>
+
+          {/* WhatsApp Section */}
+          <Box 
+            bg="green.50" 
+            p={6} 
+            borderRadius="lg" 
+            border="2px solid" 
+            borderColor="green.200"
+            textAlign="center"
+          >
+            <VStack spacing={4}>
+              <Icon as={FaWhatsapp} w={8} h={8} color="green.500" />
+              <Text fontWeight="bold" fontSize="lg" color="green.700">
+                {t.contact.whatsapp.title}
+              </Text>
+              <Text color="green.600">
+                {t.isEnglish 
+                  ? "For immediate assistance, contact us via WhatsApp!"
+                  : "Para atendimento imediato, entre em contato pelo WhatsApp!"
+                }
+              </Text>
+              <Button
+                as="a"
+                href={`https://wa.me/5521971984430?text=${encodeURIComponent(introMessage)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                size="lg"
+                bg="green.500"
+                color="white"
+                leftIcon={<Icon as={FaWhatsapp} w={5} h={5} />}
+                _hover={{
+                  bg: 'green.600',
+                  transform: 'translateY(-2px)',
+                  boxShadow: '0 8px 25px rgba(34, 197, 94, 0.3)'
+                }}
+                transition="all 0.3s"
+                borderRadius="full"
+                boxShadow="0 4px 15px rgba(34, 197, 94, 0.2)"
+              >
+                {t.contact.whatsapp.message}
+              </Button>
             </VStack>
           </Box>
 
@@ -98,10 +147,10 @@ const Contact = () => {
           <form onSubmit={handleSubmit}>
             <Stack spacing={4}>
               <FormControl isRequired>
-                <FormLabel color="rgba(42,82,118,255)">Nome</FormLabel>
+                <FormLabel color="rgba(42,82,118,255)">{t.contact.form.name}</FormLabel>
                 <Input 
                   type="text" 
-                  placeholder="Nome" 
+                  placeholder={t.contact.form.namePlaceholder}
                   bg="white"
                   borderColor="rgba(42,82,118,0.4)"
                   _hover={{ borderColor: "rgba(42,82,118,0.6)" }}
@@ -120,10 +169,10 @@ const Contact = () => {
               </FormControl>
 
               <FormControl isRequired>
-                <FormLabel color="rgba(42,82,118,255)">E-mail</FormLabel>
+                <FormLabel color="rgba(42,82,118,255)">{t.contact.form.email}</FormLabel>
                 <Input 
                   type="email" 
-                  placeholder="seu@email.com" 
+                  placeholder={t.contact.form.emailPlaceholder}
                   bg="white"
                   borderColor="rgba(42,82,118,0.4)"
                   _hover={{ borderColor: "rgba(42,82,118,0.6)" }}
@@ -131,10 +180,10 @@ const Contact = () => {
               </FormControl>
 
               <FormControl isRequired>
-                <FormLabel color="rgba(42,82,118,255)">Assunto</FormLabel>
+                <FormLabel color="rgba(42,82,118,255)">{t.contact.form.subject}</FormLabel>
                 <Input 
                   type="text" 
-                  placeholder="Assunto" 
+                  placeholder={t.contact.form.subjectPlaceholder}
                   bg="white"
                   borderColor="rgba(42,82,118,0.4)"
                   _hover={{ borderColor: "rgba(42,82,118,0.6)" }}
@@ -142,9 +191,9 @@ const Contact = () => {
               </FormControl>
 
               <FormControl isRequired>
-                <FormLabel color="rgba(42,82,118,255)">Mensagem</FormLabel>
+                <FormLabel color="rgba(42,82,118,255)">{t.contact.form.message}</FormLabel>
                 <Textarea 
-                  placeholder="Digite sua mensagem" 
+                  placeholder={t.contact.form.messagePlaceholder}
                   rows={6} 
                   bg="white"
                   borderColor="rgba(42,82,118,0.4)"
@@ -160,7 +209,7 @@ const Contact = () => {
                 w="full"
                 _hover={{ bg: "rgba(42,82,118,0.9)" }}
               >
-                Enviar
+                {t.contact.form.send}
               </Button>
             </Stack>
           </form>

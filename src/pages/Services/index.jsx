@@ -29,6 +29,7 @@ import {
   FaArrowRight,
 } from 'react-icons/fa';
 import torre2 from '../../assets/torre2.png';
+import { useTranslation } from '../../hooks/useTranslation';
 
 const MotionBox = motion(Box);
 
@@ -96,11 +97,13 @@ const ServiceCard = ({ icon, title, description, features, path }) => {
 };
 
 const Services = () => {
+  const { t } = useTranslation();
+  
   const services = [
     {
       icon: FaWifi,
-      title: 'Instalação de Small Cell',
-      description: 'Soluções completas para instalação de small cells em ambientes diversos.',
+      title: t.services.smallCell,
+      description: t.servicePages.smallCell.description,
       features: [
         'Instalação em equipamentos urbanos',
         'Implementação em fachadas',
@@ -111,8 +114,8 @@ const Services = () => {
     },
     {
       icon: FaBroadcastTower,
-      title: 'Construção de Sites',
-      description: 'Execução completa de sites de telecomunicações com expertise técnica.',
+      title: t.services.sitesConstruction,
+      description: t.servicePages.sitesConstruction.description,
       features: [
         'Sites Greenfield',
         'Rooftop',
@@ -123,8 +126,8 @@ const Services = () => {
     },
     {
       icon: FaSearchLocation,
-      title: 'Busca e Negociação de Locais',
-      description: 'Identificação e aquisição estratégica de locais para implementação.',
+      title: t.services.locationAcquisition,
+      description: t.servicePages.locationAcquisition.description,
       features: [
         'Análise de viabilidade',
         'Negociação com proprietários',
@@ -135,8 +138,8 @@ const Services = () => {
     },
     {
       icon: FaFileContract,
-      title: 'Licenciamento',
-      description: 'Gestão completa do processo de licenciamento e regularização.',
+      title: t.services.licensing,
+      description: t.servicePages.licensing.description,
       features: [
         'Licenças municipais',
         'Aprovações ambientais',
@@ -147,8 +150,8 @@ const Services = () => {
     },
     {
       icon: FaTools,
-      title: 'Manutenção',
-      description: 'Serviços de manutenção preventiva e corretiva em infraestruturas.',
+      title: t.services.maintenance,
+      description: t.servicePages.maintenance.description,
       features: [
         'Manutenção preventiva',
         'Correção de falhas',
@@ -159,8 +162,8 @@ const Services = () => {
     },
     {
       icon: FaChartLine,
-      title: 'Consultoria Técnica',
-      description: 'Consultoria especializada em projetos de telecomunicações.',
+      title: t.services.technicalConsulting,
+      description: t.servicePages.technicalConsulting.description,
       features: [
         'Análise de viabilidade',
         'Projetos executivos',
@@ -201,7 +204,7 @@ const Services = () => {
               size="2xl"
               maxW="800px"
             >
-              Nossos Serviços
+              {t.services.title}
             </Heading>
             <Text fontSize="xl" maxW="700px">
               Oferecemos soluções completas em infraestrutura de telecomunicações, desde a aquisição e licenciamento até a implementação e manutenção.
@@ -243,7 +246,7 @@ const Services = () => {
                   }}
                   transition="all 0.3s"
                 >
-                  Entre em contato
+                  {t.home.hero.contact}
                 </Button>
               </VStack>
             </Box>

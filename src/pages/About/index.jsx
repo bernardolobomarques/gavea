@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { FaUserShield, FaCalendarCheck, FaUserTie, FaThumbsUp, FaLightbulb, FaBuilding, FaSignal, FaHammer, FaNetworkWired, FaBuilding as FaBuildingIcon, FaLeaf } from 'react-icons/fa';
 import logoGavea from '../../assets/logoGavea.png';
 import torre2 from '../../assets/torre2.png';
+import { useTranslation } from '../../hooks/useTranslation';
 
 const MotionBox = motion(Box);
 const MotionFlex = motion(Flex);
@@ -54,49 +55,51 @@ const ValueCard = ({ icon, title, description }) => {
 };
 
 const About = () => {
+  const { t } = useTranslation();
+  
   const activities = [
     {
       icon: FaBuilding,
-      title: "Construção de Estações e Redes",
-      description: "Desenvolvemos projetos robustos para garantir conectividade em áreas urbanas e rurais."
+      title: t.about.activities.infrastructure.title,
+      description: t.about.activities.infrastructure.description
     },
     {
       icon: FaCalendarCheck,
-      title: "Aquisição e Licenciamento",
-      description: "Identificamos locais estratégicos para expandir nossa rede."
+      title: t.about.activities.acquisition.title,
+      description: t.about.activities.acquisition.description
     },
     {
       icon: FaSignal,
-      title: "Diversos Tipos de Sites",
-      description: "Desde Greenfield até Rooftop, passando por Biosite, Small Cell, Street Site, Indoor e Outdoor."
+      title: t.about.activities.smallCells.title,
+      description: t.about.activities.smallCells.description
     },
     {
       icon: FaHammer,
-      title: "Engenharia Especializada",
-      description: "Nossa equipe oferece projetos executivos, estruturais e laudos técnicos."
+      title: t.about.activities.consulting.title,
+      description: t.about.activities.consulting.description
     }
   ];
 
   const values = [
     { 
       icon: FaUserShield, 
-      title: "Segurança", 
-      description: "Priorizamos a integridade física e bem-estar de todos os nossos colaboradores e parceiros em cada projeto." 
+      title: t.about.values.excellence.title, 
+      description: t.about.values.excellence.description 
     },
     { 
       icon: FaCalendarCheck, 
-      title: "Integridade", 
-      description: "Mantemos os mais altos padrões éticos em nossas operações, com total transparência em nossas relações." 
+      title: t.about.values.integrity.title, 
+      description: t.about.values.integrity.description 
     },
     { 
       icon: FaUserTie, 
-      title: "Profissionalismo", 
-      description: "Entregamos soluções de alto padrão com uma equipe altamente qualificada e comprometida." 
+      title: t.about.values.commitment.title, 
+      description: t.about.values.commitment.description 
     },
     { 
       icon: FaThumbsUp, 
-      title: "Qualidade", 
-      description: "Buscamos a excelência em cada detalhe, garantindo resultados superiores em todos os projetos." 
+      title: t.about.values.innovation.title, 
+      description: t.about.values.innovation.description 
     },
     { 
       icon: FaLightbulb, 
@@ -138,12 +141,11 @@ const About = () => {
             <Flex align="center" gap={4}>
               <Icon as={FaBuildingIcon} w={10} h={10} />
               <Heading as="h1" size="2xl">
-                Sobre Nós
+                {t.about.title}
               </Heading>
             </Flex>
             <Text fontSize="xl" maxW="700px">
-              Fundada em 2013, somos líderes em infraestrutura de telecomunicações,
-              com mais de 1000 projetos realizados em todo o Brasil.
+              {t.about.subtitle}
             </Text>
           </VStack>
         </Container>
@@ -161,20 +163,16 @@ const About = () => {
               {/* Overview Section */}
               <VStack spacing={6} textAlign="center">
                 <Text fontSize="lg" maxW="800px">
-                  Fundada em 20 de fevereiro de 2013, a Gávea Telecomunicações é uma empresa líder no setor de telecomunicações, 
-                  com sede na Barra da Tijuca, Rio de Janeiro – RJ. Nosso compromisso é construir e manter infraestruturas de 
-                  comunicação confiáveis, conectando pessoas e empresas em todo o Brasil.
+                  {t.about.intro.description}
                 </Text>
                 <Text fontSize="lg" maxW="800px">
-                  Com mais de 1000 projetos realizados, nossa experiência abrange desde a construção de estações e redes de 
-                  telecomunicações até a manutenção de infraestrutura de sites. Cada projeto é um marco em nossa jornada de 
-                  conectar o futuro.
+                  {t.about.mission.description}
                 </Text>
               </VStack>
 
               {/* Nossas Atividades */}
               <VStack spacing={8} w="full">
-                <Heading as="h3" size="lg" color="rgba(42,82,118,1)">Nossas atividades</Heading>
+                <Heading as="h3" size="lg" color="rgba(42,82,118,1)">{t.about.activities.title}</Heading>
                 <SimpleGrid 
                   columns={{ base: 1, md: 2 }} 
                   spacing={8} 
@@ -228,7 +226,7 @@ const About = () => {
 
               {/* Nossos Valores */}
               <VStack spacing={8} w="full">
-                <Heading as="h3" size="lg" color="rgba(42,82,118,1)">Nossos valores</Heading>
+                <Heading as="h3" size="lg" color="rgba(42,82,118,1)">{t.about.values.title}</Heading>
                 <SimpleGrid 
                   columns={{ base: 1, md: 2 }} 
                   spacing={6}

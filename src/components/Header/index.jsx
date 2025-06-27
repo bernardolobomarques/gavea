@@ -3,11 +3,14 @@ import { Link as RouterLink, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { FaChevronDown } from 'react-icons/fa';
 import logoGavea from '../../assets/logoGavea.png';
+import LanguageSelector from '../LanguageSelector';
+import { useTranslation } from '../../hooks/useTranslation';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,18 +26,18 @@ const Header = () => {
   }, [location.pathname]);
 
   const serviceItems = [
-    { path: '/services/small-cell', label: 'Instalação de Small Cell' },
-    { path: '/services/sites-construction', label: 'Construção de Sites' },
-    { path: '/services/location-acquisition', label: 'Busca e Negociação de Locais' },
-    { path: '/services/licensing', label: 'Licenciamento' },
-    { path: '/services/maintenance', label: 'Manutenção Corretiva' },
-    { path: '/services/technical-consulting', label: 'Consultoria Técnica' },
+    { path: '/services/small-cell', label: t.services.smallCell },
+    { path: '/services/sites-construction', label: t.services.sitesConstruction },
+    { path: '/services/location-acquisition', label: t.services.locationAcquisition },
+    { path: '/services/licensing', label: t.services.licensing },
+    { path: '/services/maintenance', label: t.services.maintenance },
+    { path: '/services/technical-consulting', label: t.services.technicalConsulting },
   ];
 
   const navItems = [
-    { path: '/', label: 'Home' },
-    { path: '/about', label: 'Sobre Nós' },
-    { path: '/contact', label: 'Contato' }
+    { path: '/', label: t.navigation.home },
+    { path: '/about', label: t.navigation.about },
+    { path: '/contact', label: t.navigation.contact }
   ];
 
   const isServicePath = location.pathname.startsWith('/services');
@@ -151,7 +154,7 @@ const Header = () => {
                 transition: 'width 0.2s ease-in-out'
               }}
             >
-              Serviços
+              {t.navigation.services}
               <Icon as={FaChevronDown} ml={1} w={3} h={3} />
             </Link>
             <Box
@@ -234,6 +237,9 @@ const Header = () => {
               {item.label}
             </Link>
           ))}
+
+          {/* Language Selector */}
+          <LanguageSelector isScrolled={isScrolled} />
         </Flex>
       </Flex>
     </Box>
