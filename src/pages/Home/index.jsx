@@ -34,7 +34,7 @@ const Feature = ({ title, text, icon }) => {
     <Stack
       align={'center'}
       textAlign={'center'}
-      p={8}
+      p={{ base: 6, md: 8 }}
       borderRadius="lg"
       bg={useColorModeValue('white', 'gray.800')}
       shadow="lg"
@@ -43,10 +43,11 @@ const Feature = ({ title, text, icon }) => {
         transform: 'translateY(-5px)',
         shadow: 'xl'
       }}
+      spacing={4}
     >
       <Flex
-        w={16}
-        h={16}
+        w={{ base: 12, md: 16 }}
+        h={{ base: 12, md: 16 }}
         align={'center'}
         justify={'center'}
         color={'white'}
@@ -56,8 +57,8 @@ const Feature = ({ title, text, icon }) => {
       >
         {icon}
       </Flex>
-      <Text fontWeight={600} fontSize="lg">{title}</Text>
-      <Text color={'gray.600'}>{text}</Text>
+      <Text fontWeight={600} fontSize={{ base: 'md', md: 'lg' }}>{title}</Text>
+      <Text color={'gray.600'} fontSize={{ base: 'sm', md: 'md' }}>{text}</Text>
     </Stack>
   );
 };
@@ -132,7 +133,7 @@ const ServiceCard = ({ icon, title, description, path }) => {
     <Box
       as={RouterLink}
       to={path}
-      p={8}
+      p={{ base: 6, md: 8 }}
       bg={useColorModeValue('white', 'gray.800')}
       borderRadius="lg"
       shadow="md"
@@ -150,16 +151,16 @@ const ServiceCard = ({ icon, title, description, path }) => {
       display="block"
     >
       <VStack spacing={4} align="flex-start">
-        <Icon as={icon} w={8} h={8} color="rgba(42,82,118,1)" />
-        <Heading size="md">{title}</Heading>
-        <Text color="gray.600">{description}</Text>
+        <Icon as={icon} w={{ base: 6, md: 8 }} h={{ base: 6, md: 8 }} color="rgba(42,82,118,1)" />
+        <Heading size={{ base: 'sm', md: 'md' }}>{title}</Heading>
+        <Text color="gray.600" fontSize={{ base: 'sm', md: 'md' }}>{description}</Text>
       </VStack>
       <Icon
         as={FaArrowRight}
         className="arrow"
         position="absolute"
-        bottom="8"
-        right="8"
+        bottom={{ base: '6', md: '8' }}
+        right={{ base: '6', md: '8' }}
         w={5}
         h={5}
         color="rgba(42,82,118,1)"
@@ -283,39 +284,42 @@ const Home = () => {
             >
               {t.home.hero.subtitle}
             </Text>
-            <Stack direction={{base: 'column', sm: 'row'}} spacing={6}>
+            <Stack direction={{base: 'column', sm: 'row'}} spacing={{ base: 4, md: 6 }} align={{ base: 'stretch', sm: 'center' }}>
               <Button
                 as={RouterLink}
                 to="/contact"
-                size="lg"
+                size={{ base: 'md', md: 'lg' }}
                 bg="white"
                 color="rgba(42,82,118,1)"
-                px={8}
-                py={6}
-                fontSize="lg"
+                px={{ base: 6, md: 8 }}
+                py={{ base: 4, md: 6 }}
+                fontSize={{ base: 'md', md: 'lg' }}
                 _hover={{
                   bg: 'gray.100',
                   transform: 'translateY(-2px)',
                 }}
                 transition="all 0.3s"
+                w={{ base: 'full', sm: 'auto' }}
               >
                 {t.home.hero.contact}
               </Button>
               <Button
                 as={RouterLink}
                 to="/services"
-                size="lg"
+                size={{ base: 'md', md: 'lg' }}
                 variant="outline"
                 borderColor="white"
                 borderWidth="2px"
-                px={8}
-                py={6}
-                fontSize="lg"
+                color="white"
+                px={{ base: 6, md: 8 }}
+                py={{ base: 4, md: 6 }}
+                fontSize={{ base: 'md', md: 'lg' }}
                 _hover={{
                   bg: 'whiteAlpha.200',
                   transform: 'translateY(-2px)',
                 }}
                 transition="all 0.3s"
+                w={{ base: 'full', sm: 'auto' }}
               >
                 {t.home.hero.cta}
               </Button>
@@ -326,13 +330,13 @@ const Home = () => {
                 href={`https://wa.me/5521971984430?text=${encodeURIComponent(t.isEnglish ? 'Hello! I saw your website and would like to know more about your telecommunications services.' : 'Olá! Vi seu site e gostaria de saber mais sobre seus serviços de telecomunicações.')}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                size="lg"
+                size={{ base: 'md', md: 'lg' }}
                 bg="green.500"
                 color="white"
-                leftIcon={<Icon as={FaWhatsapp} w={5} h={5} />}
-                px={8}
-                py={6}
-                fontSize="lg"
+                leftIcon={<Icon as={FaWhatsapp} w={{ base: 4, md: 5 }} h={{ base: 4, md: 5 }} />}
+                px={{ base: 6, md: 8 }}
+                py={{ base: 4, md: 6 }}
+                fontSize={{ base: 'md', md: 'lg' }}
                 _hover={{
                   bg: 'green.600',
                   transform: 'translateY(-2px)',
@@ -341,6 +345,7 @@ const Home = () => {
                 transition="all 0.3s"
                 borderRadius="full"
                 boxShadow="0 4px 15px rgba(34, 197, 94, 0.2)"
+                w={{ base: 'full', sm: 'auto' }}
               >
                 WhatsApp
               </Button>
@@ -350,23 +355,23 @@ const Home = () => {
       </Box>
 
       {/* Features Section */}
-      <Box py={20} bg={useColorModeValue('gray.50', 'gray.900')}>
+      <Box py={{ base: 12, md: 20 }} bg={useColorModeValue('gray.50', 'gray.900')}>
         <Container maxW="1200px">
-          <VStack spacing={12}>
-            <Heading textAlign="center">{t.home.features.title}</Heading>
-            <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
+          <VStack spacing={{ base: 8, md: 12 }}>
+            <Heading textAlign="center" fontSize={{ base: '2xl', md: '3xl' }}>{t.home.features.title}</Heading>
+            <SimpleGrid columns={{ base: 1, md: 3 }} spacing={{ base: 6, md: 10 }}>
               <Feature
-                icon={<Icon as={FaBuilding} w={8} h={8} />}
+                icon={<Icon as={FaBuilding} w={{ base: 6, md: 8 }} h={{ base: 6, md: 8 }} />}
                 title={t.home.features.expertise.title}
                 text={t.home.features.expertise.description}
               />
               <Feature
-                icon={<Icon as={FaUserCheck} w={8} h={8} />}
+                icon={<Icon as={FaUserCheck} w={{ base: 6, md: 8 }} h={{ base: 6, md: 8 }} />}
                 title={t.home.features.quality.title}
                 text={t.home.features.quality.description}
               />
               <Feature
-                icon={<Icon as={FaUsers} w={8} h={8} />}
+                icon={<Icon as={FaUsers} w={{ base: 6, md: 8 }} h={{ base: 6, md: 8 }} />}
                 title={t.home.features.support.title}
                 text={t.home.features.support.description}
               />
@@ -376,13 +381,14 @@ const Home = () => {
       </Box>
 
       {/* Stats Section */}
-      <Box py={20} bg={useColorModeValue('gray.300', 'gray.800')}>
+      <Box py={{ base: 12, md: 20 }} bg={useColorModeValue('gray.300', 'gray.800')}>
         <Container maxW="1200px">
-          <VStack spacing={12}>
-            <Heading color="gray.800" textAlign="center">Nossos números</Heading>
+          <VStack spacing={{ base: 8, md: 12 }}>
+            <Heading color="gray.800" textAlign="center" fontSize={{ base: '2xl', md: '3xl' }}>Nossos números</Heading>
             <Grid
-              templateColumns={{ base: '1fr', md: 'repeat(3, 1fr)' }}
-              gap={8}
+              templateColumns={{ base: '1fr', sm: 'repeat(3, 1fr)' }}
+              gap={{ base: 4, md: 8 }}
+              w="full"
             >
               <StatCard label={t.home.stats.projectsLabel} number={t.home.stats.projectsNumber} />
               <StatCard label={t.home.stats.clientsLabel} number={t.home.stats.clientsNumber} />
@@ -393,16 +399,22 @@ const Home = () => {
       </Box>
 
       {/* Services Section */}
-      <Box py={20} bg={useColorModeValue('white', 'gray.900')}>
+      <Box py={{ base: 12, md: 20 }} bg={useColorModeValue('white', 'gray.900')}>
         <Container maxW="1200px">
-          <VStack spacing={12}>
+          <VStack spacing={{ base: 8, md: 12 }}>
             <VStack spacing={4}>
-              <Heading textAlign="center">{t.services.title}</Heading>
-              <Text textAlign="center" fontSize="lg" color="gray.600" maxW="700px">
+              <Heading textAlign="center" fontSize={{ base: '2xl', md: '3xl' }}>{t.services.title}</Heading>
+              <Text 
+                textAlign="center" 
+                fontSize={{ base: 'md', md: 'lg' }} 
+                color="gray.600" 
+                maxW="700px"
+                px={{ base: 4, md: 0 }}
+              >
                 Oferecemos uma gama completa de serviços especializados em infraestrutura de telecomunicações
               </Text>
             </VStack>
-            <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8}>
+            <SimpleGrid columns={{ base: 1, md: 2 }} spacing={{ base: 6, md: 8 }} w="full">
               <ServiceCard
                 icon={FaUserTie}
                 title="Consultoria Técnica"
@@ -431,7 +443,7 @@ const Home = () => {
             <Button
               as={RouterLink}
               to="/services"
-              size="lg"
+              size={{ base: 'md', md: 'lg' }}
               bg="rgba(42,82,118,1)"
               color="white"
               px={8}

@@ -1,0 +1,124 @@
+/* Global Mobile Optimizations */
+
+/* Improved touch targets for mobile */
+@media (max-width: 768px) {
+  /* Ensure buttons and links have minimum touch target size */
+  button, a, input, select, textarea {
+    min-height: 44px;
+  }
+  
+  /* Better touch scrolling */
+  * {
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Prevent zoom on form inputs on iOS */
+  input[type="color"],
+  input[type="date"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="email"],
+  input[type="month"],
+  input[type="number"],
+  input[type="password"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="text"],
+  input[type="time"],
+  input[type="url"],
+  input[type="week"],
+  select:focus,
+  textarea {
+    font-size: 16px;
+  }
+  
+  /* Better image loading on slow connections */
+  img {
+    image-rendering: optimizeQuality;
+  }
+  
+  /* Smooth scroll behavior */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Better tap highlight */
+  * {
+    -webkit-tap-highlight-color: rgba(42, 82, 118, 0.1);
+  }
+  
+  /* Improve readability */
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+}
+
+/* Loading state for images */
+img {
+  background-color: #f7fafc;
+  transition: opacity 0.3s ease;
+}
+
+img[loading="lazy"] {
+  opacity: 0;
+}
+
+img[loading="lazy"].loaded {
+  opacity: 1;
+}
+
+/* Focus styles for accessibility */
+button:focus,
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid rgba(42, 82, 118, 0.6);
+  outline-offset: 2px;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Better selection color */
+::selection {
+  background-color: rgba(42, 82, 118, 0.2);
+  color: rgba(42, 82, 118, 1);
+}
+
+/* Mobile-first responsive images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Improved mobile form styling */
+@media (max-width: 768px) {
+  .chakra-form-control {
+    margin-bottom: 1rem;
+  }
+  
+  .chakra-input,
+  .chakra-textarea,
+  .chakra-select {
+    border-radius: 8px;
+    padding: 12px 16px;
+  }
+  
+  .chakra-button {
+    border-radius: 8px;
+    font-weight: 600;
+    min-height: 48px;
+  }
+}

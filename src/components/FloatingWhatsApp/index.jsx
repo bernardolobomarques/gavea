@@ -54,8 +54,8 @@ const FloatingWhatsApp = () => {
   return (
     <Box
       position="fixed"
-      bottom="20px"
-      right="20px"
+      bottom={{ base: '15px', md: '20px' }}
+      right={{ base: '15px', md: '20px' }}
       zIndex="1000"
       onMouseEnter={() => setIsExpanded(true)}
       onMouseLeave={() => setIsExpanded(false)}
@@ -67,17 +67,18 @@ const FloatingWhatsApp = () => {
         hasArrow
         bg="green.500"
         color="white"
+        isDisabled={isExpanded}
       >
         <Button
           onClick={handleClick}
-          size="lg"
+          size={{ base: 'md', md: 'lg' }}
           bg="green.500"
           color="white"
           borderRadius="full"
-          w={isExpanded ? "auto" : "60px"}
-          h="60px"
-          minW="60px"
-          px={isExpanded ? 6 : 0}
+          w={isExpanded ? "auto" : { base: "50px", md: "60px" }}
+          h={{ base: "50px", md: "60px" }}
+          minW={{ base: "50px", md: "60px" }}
+          px={isExpanded ? { base: 4, md: 6 } : 0}
           _hover={{ 
             bg: 'green.600',
             transform: 'scale(1.1)',
@@ -105,15 +106,16 @@ const FloatingWhatsApp = () => {
             transition: 'left 0.6s ease',
           }}
         >
-          <Flex align="center" gap={isExpanded ? 3 : 0}>
-            <Icon as={FaWhatsapp} w={6} h={6} />
+          <Flex align="center" gap={isExpanded ? { base: 2, md: 3 } : 0}>
+            <Icon as={FaWhatsapp} w={{ base: 5, md: 6 }} h={{ base: 5, md: 6 }} />
             {isExpanded && (
               <Text 
-                fontSize="md" 
+                fontSize={{ base: 'sm', md: 'md' }}
                 fontWeight="bold"
                 whiteSpace="nowrap"
                 opacity={isExpanded ? 1 : 0}
                 transition="opacity 0.3s ease"
+                display={{ base: 'none', sm: 'block' }}
               >
                 {t.contact?.whatsapp?.message || (t.isEnglish ? 'Talk to us' : 'Fale conosco')}
               </Text>
@@ -122,34 +124,14 @@ const FloatingWhatsApp = () => {
         </Button>
       </Tooltip>
 
-      {/* Indicador de "novo" ou "online" */}
-      <Box
-        position="absolute"
-        top="-2px"
-        right="-2px"
-        bg="red.500"
-        color="white"
-        borderRadius="full"
-        w="16px"
-        h="16px"
-        display="flex"
-        alignItems="center"
-        justifyContent="center"
-        fontSize="10px"
-        fontWeight="bold"
-        animation={`${pulse} 1.5s infinite`}
-      >
-        ●
-      </Box>
-
       {/* Efeito de ondas ao redor do botão */}
       <Box
         position="absolute"
         top="50%"
         left="50%"
         transform="translate(-50%, -50%)"
-        w="60px"
-        h="60px"
+        w={{ base: '50px', md: '60px' }}
+        h={{ base: '50px', md: '60px' }}
         borderRadius="full"
         border="2px solid"
         borderColor="green.400"
@@ -163,8 +145,8 @@ const FloatingWhatsApp = () => {
         top="50%"
         left="50%"
         transform="translate(-50%, -50%)"
-        w="80px"
-        h="80px"
+        w={{ base: '70px', md: '80px' }}
+        h={{ base: '70px', md: '80px' }}
         borderRadius="full"
         border="2px solid"
         borderColor="green.400"

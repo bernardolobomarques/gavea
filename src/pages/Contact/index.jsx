@@ -49,38 +49,65 @@ const Contact = () => {
   };
 
   return (
-    <Container maxW="1200px" py={10}>
-      <VStack spacing={8} align="stretch" mb={8}>
-        <Heading as="h2" size="xl" textAlign="center" color="rgba(42,82,118,255)">{t.contact.title}</Heading>
+    <Container maxW="1200px" py={{ base: 6, md: 10 }}>
+      <VStack spacing={{ base: 6, md: 8 }} align="stretch" mb={{ base: 6, md: 8 }}>
+        <Heading 
+          as="h2" 
+          size={{ base: 'lg', md: 'xl' }}
+          textAlign="center" 
+          color="rgba(42,82,118,255)"
+        >
+          {t.contact.title}
+        </Heading>
       </VStack>
 
-      <Flex direction={{ base: 'column', lg: 'row' }} gap={8} bg="white" p={8} borderRadius="lg" boxShadow="0 2px 10px rgba(0,0,0,0.1)">
+      <Flex 
+        direction={{ base: 'column', lg: 'row' }} 
+        gap={{ base: 6, md: 8 }} 
+        bg="white" 
+        p={{ base: 4, md: 8 }} 
+        borderRadius="lg" 
+        boxShadow="0 2px 10px rgba(0,0,0,0.1)"
+      >
         {/* Left Column - Contact Info and Map */}
-        <VStack flex="1" align="stretch" spacing={8}>
+        <VStack flex="1" align="stretch" spacing={{ base: 6, md: 8 }}>
           <Box>
-            <Heading as="h3" size="lg" mb={6} color="rgba(42,82,118,255)">
+            <Heading 
+              as="h3" 
+              size={{ base: 'md', md: 'lg' }}
+              mb={{ base: 4, md: 6 }}
+              color="rgba(42,82,118,255)"
+            >
               {t.contact.info.title}
             </Heading>
             
             <VStack spacing={4} align="stretch">
               <Flex align="center" gap={3}>
-                <Icon as={FaPhone} color="rgba(42,82,118,255)" />
-                <Text color="rgba(42,82,118,255)">{t.contact.info.phone.value}</Text>
+                <Icon as={FaPhone} color="rgba(42,82,118,255)" w={{ base: 4, md: 5 }} h={{ base: 4, md: 5 }} />
+                <Text color="rgba(42,82,118,255)" fontSize={{ base: 'sm', md: 'md' }}>
+                  {t.contact.info.phone.value}
+                </Text>
               </Flex>
               
               <Flex align="center" gap={3}>
-                <Icon as={FaEnvelope} color="rgba(42,82,118,255)" />
-                <Text color="rgba(42,82,118,255)">{t.contact.info.email.value}</Text>
+                <Icon as={FaEnvelope} color="rgba(42,82,118,255)" w={{ base: 4, md: 5 }} h={{ base: 4, md: 5 }} />
+                <Text color="rgba(42,82,118,255)" fontSize={{ base: 'sm', md: 'md' }}>
+                  {t.contact.info.email.value}
+                </Text>
               </Flex>
               
               <Flex align="center" gap={3}>
-                <Icon as={FaMapMarkerAlt} color="rgba(42,82,118,255)" />
-                <Text color="rgba(42,82,118,255)">{t.contact.info.address.value}</Text>
+                <Icon as={FaMapMarkerAlt} color="rgba(42,82,118,255)" w={{ base: 4, md: 5 }} h={{ base: 4, md: 5 }} />
+                <Text color="rgba(42,82,118,255)" fontSize={{ base: 'sm', md: 'md' }}>
+                  {t.contact.info.address.value}
+                </Text>
               </Flex>
               
               <Flex align="center" gap={3}>
-                <Icon as={FaClock} color="rgba(42,82,118,255)" />
-                <Text color="rgba(42,82,118,255)">{t.contact.info.hours.value}</Text>
+                <Icon as={FaClock} color="rgba(42,82,118,255)" w={{ base: 4, md: 5 }} h={{ base: 4, md: 5 }} />
+                <Text color="rgba(42,82,118,255)" fontSize={{ base: 'sm', md: 'md' }}>
+                  {t.contact.info.hours.value}
+                </Text>
               </Flex>
             </VStack>
           </Box>
@@ -88,18 +115,18 @@ const Contact = () => {
           {/* WhatsApp Section */}
           <Box 
             bg="green.50" 
-            p={6} 
+            p={{ base: 4, md: 6 }}
             borderRadius="lg" 
             border="2px solid" 
             borderColor="green.200"
             textAlign="center"
           >
             <VStack spacing={4}>
-              <Icon as={FaWhatsapp} w={8} h={8} color="green.500" />
-              <Text fontWeight="bold" fontSize="lg" color="green.700">
+              <Icon as={FaWhatsapp} w={{ base: 6, md: 8 }} h={{ base: 6, md: 8 }} color="green.500" />
+              <Text fontWeight="bold" fontSize={{ base: 'md', md: 'lg' }} color="green.700">
                 {t.contact.whatsapp.title}
               </Text>
-              <Text color="green.600">
+              <Text color="green.600" fontSize={{ base: 'sm', md: 'md' }}>
                 {t.isEnglish 
                   ? "For immediate assistance, contact us via WhatsApp!"
                   : "Para atendimento imediato, entre em contato pelo WhatsApp!"
@@ -110,10 +137,10 @@ const Contact = () => {
                 href={`https://wa.me/5521971984430?text=${encodeURIComponent(introMessage)}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                size="lg"
+                size={{ base: 'md', md: 'lg' }}
                 bg="green.500"
                 color="white"
-                leftIcon={<Icon as={FaWhatsapp} w={5} h={5} />}
+                leftIcon={<Icon as={FaWhatsapp} w={{ base: 4, md: 5 }} h={{ base: 4, md: 5 }} />}
                 _hover={{
                   bg: 'green.600',
                   transform: 'translateY(-2px)',
@@ -122,13 +149,20 @@ const Contact = () => {
                 transition="all 0.3s"
                 borderRadius="full"
                 boxShadow="0 4px 15px rgba(34, 197, 94, 0.2)"
+                w={{ base: 'full', sm: 'auto' }}
               >
                 {t.contact.whatsapp.message}
               </Button>
             </VStack>
           </Box>
 
-          <Box h="300px" w="100%" bg="white" borderRadius="md" overflow="hidden">
+          <Box 
+            h={{ base: '250px', md: '300px' }}
+            w="100%" 
+            bg="white" 
+            borderRadius="md" 
+            overflow="hidden"
+          >
             <iframe
               src="https://maps.google.com/maps?q=Avenida%20Presidente%20Vargas%20590%201309%2C%20Rio%20de%20Janeiro&t=m&z=18&output=embed&iwloc=near"
               width="100%"
@@ -147,57 +181,72 @@ const Contact = () => {
           <form onSubmit={handleSubmit}>
             <Stack spacing={4}>
               <FormControl isRequired>
-                <FormLabel color="rgba(42,82,118,255)">{t.contact.form.name}</FormLabel>
+                <FormLabel color="rgba(42,82,118,255)" fontSize={{ base: 'sm', md: 'md' }}>
+                  {t.contact.form.name}
+                </FormLabel>
                 <Input 
                   type="text" 
                   placeholder={t.contact.form.namePlaceholder}
                   bg="white"
                   borderColor="rgba(42,82,118,0.4)"
                   _hover={{ borderColor: "rgba(42,82,118,0.6)" }}
+                  size={{ base: 'md', md: 'md' }}
                 />
               </FormControl>
               
               <FormControl isRequired>
-                <FormLabel color="rgba(42,82,118,255)">Sobrenome</FormLabel>
+                <FormLabel color="rgba(42,82,118,255)" fontSize={{ base: 'sm', md: 'md' }}>
+                  Sobrenome
+                </FormLabel>
                 <Input 
                   type="text" 
                   placeholder="Sobrenome" 
                   bg="white"
                   borderColor="rgba(42,82,118,0.4)"
                   _hover={{ borderColor: "rgba(42,82,118,0.6)" }}
+                  size={{ base: 'md', md: 'md' }}
                 />
               </FormControl>
 
               <FormControl isRequired>
-                <FormLabel color="rgba(42,82,118,255)">{t.contact.form.email}</FormLabel>
+                <FormLabel color="rgba(42,82,118,255)" fontSize={{ base: 'sm', md: 'md' }}>
+                  {t.contact.form.email}
+                </FormLabel>
                 <Input 
                   type="email" 
                   placeholder={t.contact.form.emailPlaceholder}
                   bg="white"
                   borderColor="rgba(42,82,118,0.4)"
                   _hover={{ borderColor: "rgba(42,82,118,0.6)" }}
+                  size={{ base: 'md', md: 'md' }}
                 />
               </FormControl>
 
               <FormControl isRequired>
-                <FormLabel color="rgba(42,82,118,255)">{t.contact.form.subject}</FormLabel>
+                <FormLabel color="rgba(42,82,118,255)" fontSize={{ base: 'sm', md: 'md' }}>
+                  {t.contact.form.subject}
+                </FormLabel>
                 <Input 
                   type="text" 
                   placeholder={t.contact.form.subjectPlaceholder}
                   bg="white"
                   borderColor="rgba(42,82,118,0.4)"
                   _hover={{ borderColor: "rgba(42,82,118,0.6)" }}
+                  size={{ base: 'md', md: 'md' }}
                 />
               </FormControl>
 
               <FormControl isRequired>
-                <FormLabel color="rgba(42,82,118,255)">{t.contact.form.message}</FormLabel>
+                <FormLabel color="rgba(42,82,118,255)" fontSize={{ base: 'sm', md: 'md' }}>
+                  {t.contact.form.message}
+                </FormLabel>
                 <Textarea 
                   placeholder={t.contact.form.messagePlaceholder}
-                  rows={6} 
+                  rows={{ base: 4, md: 6 }}
                   bg="white"
                   borderColor="rgba(42,82,118,0.4)"
                   _hover={{ borderColor: "rgba(42,82,118,0.6)" }}
+                  size={{ base: 'md', md: 'md' }}
                 />
               </FormControl>
 
@@ -205,7 +254,7 @@ const Contact = () => {
                 type="submit" 
                 bg="rgba(42,82,118,255)"
                 color="white"
-                size="lg"
+                size={{ base: 'md', md: 'lg' }}
                 w="full"
                 _hover={{ bg: "rgba(42,82,118,0.9)" }}
               >
