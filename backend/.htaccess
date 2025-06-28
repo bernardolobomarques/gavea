@@ -1,0 +1,61 @@
+<?php
+/**
+ * Arquivo .htaccess para segurança e configuração
+ */
+?>
+
+# Negar acesso a arquivos de configuração sensíveis
+<Files "config.php">
+    Order allow,deny
+    Deny from all
+</Files>
+
+<Files "*.log">
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Permitir apenas métodos HTTP específicos
+<LimitExcept GET POST OPTIONS>
+    Order allow,deny
+    Deny from all
+</LimitExcept>
+
+# Headers de segurança
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options nosniff
+    Header always set X-Frame-Options DENY
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# Configurações CORS para o frontend
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+    Header set Access-Control-Allow-Methods "GET, POST, OPTIONS"
+    Header set Access-Control-Allow-Headers "Content-Type, Authorization"
+    Header set Access-Control-Max-Age "3600"
+</IfModule>
+
+# Cache control para arquivos PHP
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType application/json "access plus 0 seconds"
+</IfModule>
+
+# Proteção contra ataques de força bruta
+<IfModule mod_evasive24.c>
+    DOSHashTableSize    3097
+    DOSPageCount        2
+    DOSSiteCount        50
+    DOSPageInterval     1
+    DOSSiteInterval     1
+    DOSBlockingPeriod   600
+</IfModule>
+
+# Log de erros (opcional)
+<IfModule mod_log_config.c>
+    LogFormat "%h %l %u %t \"%r\" %>s %O \"%{Referer}i\" \"%{User-Agent}i\"" combined
+    CustomLog logs/access.log combined
+    ErrorLog logs/error.log
+</IfModule>
