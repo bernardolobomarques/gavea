@@ -22,3 +22,21 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Backend (mantido apenas localmente)
+backend/
+deploy-ready/
+
+# Arquivos de deploy e configuração
+*.bat
+*.sh
+DEPLOY_*.md
+optimize-images.js
+prepare-deploy*
+
+# Arquivos de ambiente e configuração sensível
+.env
+.env.local
+.env.production
+config.php
+*.config.local.*
