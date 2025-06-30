@@ -17,6 +17,7 @@ import {
 import { motion } from 'framer-motion';
 import { Link as RouterLink } from 'react-router-dom';
 import { FaFileContract, FaCheckCircle, FaArrowRight } from 'react-icons/fa';
+import { useTranslation } from '../../../hooks/useTranslation';
 import torre2 from '../../../assets/torre2.png';
 import rooftop4 from '../../../assets/rooftop4.jpeg';
 import rooftop5 from '../../../assets/rooftop5.jpg';
@@ -25,31 +26,26 @@ import rooftop6 from '../../../assets/rooftop6.jpg';
 const MotionBox = motion(Box);
 
 const Licensing = () => {
-  const benefits = [
-    'Agilidade no processo de licenciamento',
-    'Conformidade com legislações',
-    'Redução de riscos legais',
-    'Acompanhamento personalizado',
-    'Expertise regulatória',
-    'Documentação completa'
-  ];
+  const { t } = useTranslation();
 
+  const benefits = t.servicePages.licensing.benefits.items;
+  
   const services = [
     {
-      title: 'Licenciamento Municipal',
-      description: 'Obtenção de alvarás e licenças junto às prefeituras e órgãos municipais.'
+      title: t.servicePages.licensing.services.municipal.title,
+      description: t.servicePages.licensing.services.municipal.description
     },
     {
-      title: 'Licenciamento Ambiental',
-      description: 'Gestão de processos junto aos órgãos ambientais e estudos de impacto.'
+      title: t.servicePages.licensing.services.environmental.title,
+      description: t.servicePages.licensing.services.environmental.description
     },
     {
-      title: 'Regularização',
-      description: 'Regularização de estruturas existentes e adequação às normas vigentes.'
+      title: t.servicePages.licensing.services.regularization.title,
+      description: t.servicePages.licensing.services.regularization.description
     },
     {
-      title: 'Gestão de Processos',
-      description: 'Acompanhamento integral dos processos de licenciamento e documentação.'
+      title: t.servicePages.licensing.services.processManagement.title,
+      description: t.servicePages.licensing.services.processManagement.description
     }
   ];
 
@@ -81,12 +77,11 @@ const Licensing = () => {
             <Flex align="center" gap={4}>
               <Icon as={FaFileContract} w={10} h={10} />
               <Heading as="h1" size="2xl">
-                Licenciamento
+                {t.servicePages.licensing.heroTitle}
               </Heading>
             </Flex>
             <Text fontSize="xl" maxW="700px">
-              Gestão completa do processo de licenciamento e regularização de
-              infraestruturas de telecomunicações.
+              {t.servicePages.licensing.heroSubtitle}
             </Text>
           </VStack>
         </Container>
@@ -99,20 +94,17 @@ const Licensing = () => {
             {/* Overview Section */}
             <VStack spacing={6} align="stretch" w="full">
               <Heading size="xl" color="rgba(42,82,118,1)">
-                Visão Geral
+                {t.servicePages.licensing.overview.title}
               </Heading>
               <Text fontSize="lg" color="gray.600">
-                Nossa equipe especializada em licenciamento garante que sua infraestrutura
-                esteja em total conformidade com as legislações vigentes. Cuidamos de todo
-                o processo burocrático, desde a preparação da documentação até a obtenção
-                das licenças necessárias.
+                {t.servicePages.licensing.overview.description}
               </Text>
             </VStack>
 
             {/* Benefits Section */}
             <VStack spacing={6} align="stretch" w="full">
               <Heading size="lg" color="rgba(42,82,118,1)">
-                Benefícios
+                {t.servicePages.licensing.benefits.title}
               </Heading>
               <List spacing={3}>
                 {benefits.map((benefit, index) => (
@@ -132,7 +124,7 @@ const Licensing = () => {
             {/* Services Section */}
             <VStack spacing={6} align="stretch" w="full">
               <Heading size="lg" color="rgba(42,82,118,1)">
-                Nossos Serviços
+                {t.servicePages.licensing.services.title}
               </Heading>
               <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8}>
                 {services.map((service, index) => (
@@ -159,7 +151,7 @@ const Licensing = () => {
             {/* Project Gallery */}
             <VStack spacing={6} align="stretch" w="full">
               <Heading size="lg" color="rgba(42,82,118,1)">
-                Projetos Licenciados
+                {t.servicePages.licensing.gallery.title}
               </Heading>
               <SimpleGrid columns={{ base: 1, md: 3 }} spacing={8}>
                 <Box
@@ -170,7 +162,7 @@ const Licensing = () => {
                 >
                   <Image
                     src={rooftop4}
-                    alt="Site licenciado em rooftop"
+                    alt={t.servicePages.licensing.gallery.alt1}
                     w="100%"
                     h="100%"
                     objectFit="cover"
@@ -186,7 +178,7 @@ const Licensing = () => {
                 >
                   <Image
                     src={rooftop5}
-                    alt="Site em processo de licenciamento"
+                    alt={t.servicePages.licensing.gallery.alt2}
                     w="100%"
                     h="100%"
                     objectFit="cover"
@@ -202,7 +194,7 @@ const Licensing = () => {
                 >
                   <Image
                     src={rooftop6}
-                    alt="Projeto licenciado"
+                    alt={t.servicePages.licensing.gallery.alt3}
                     w="100%"
                     h="100%"
                     objectFit="cover"
@@ -224,11 +216,10 @@ const Licensing = () => {
             >
               <VStack spacing={6}>
                 <Heading size="lg" color="rgba(42,82,118,1)">
-                  Precisa regularizar sua infraestrutura?
+                  {t.servicePages.licensing.cta.title}
                 </Heading>
                 <Text fontSize="lg" color="gray.600" maxW="700px">
-                  Entre em contato para discutir suas necessidades de licenciamento
-                  e descobrir como podemos ajudar no seu projeto.
+                  {t.servicePages.licensing.cta.description}
                 </Text>
                 <Button
                   as={RouterLink}
@@ -244,7 +235,7 @@ const Licensing = () => {
                   }}
                   transition="all 0.3s"
                 >
-                  Entre em contato
+                  {t.servicePages.licensing.cta.button}
                 </Button>
               </VStack>
             </Box>

@@ -327,7 +327,7 @@ const Home = () => {
               {/* WhatsApp Button */}
               <Button
                 as="a"
-                href={`https://wa.me/5521971984430?text=${encodeURIComponent(t.isEnglish ? 'Hello! I saw your website and would like to know more about your telecommunications services.' : 'Olá! Vi seu site e gostaria de saber mais sobre seus serviços de telecomunicações.')}`}
+                href={`https://wa.me/5521971984430?text=${encodeURIComponent(t.contact?.whatsapp?.introMessage || (t.isEnglish ? 'Hello! I saw your website and would like to know more about your telecommunications services.' : 'Olá! Vi seu site e gostaria de saber mais sobre seus serviços de telecomunicações.'))}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 size={{ base: 'md', md: 'lg' }}
@@ -384,7 +384,7 @@ const Home = () => {
       <Box py={{ base: 12, md: 20 }} bg={useColorModeValue('gray.300', 'gray.800')}>
         <Container maxW="1200px">
           <VStack spacing={{ base: 8, md: 12 }}>
-            <Heading color="gray.800" textAlign="center" fontSize={{ base: '2xl', md: '3xl' }}>Nossos números</Heading>
+            <Heading color="gray.800" textAlign="center" fontSize={{ base: '2xl', md: '3xl' }}>{t.homePageContent.statsSection.title}</Heading>
             <Grid
               templateColumns={{ base: '1fr', sm: 'repeat(3, 1fr)' }}
               gap={{ base: 4, md: 8 }}
@@ -411,32 +411,32 @@ const Home = () => {
                 maxW="700px"
                 px={{ base: 4, md: 0 }}
               >
-                Oferecemos uma gama completa de serviços especializados em infraestrutura de telecomunicações
+                {t.homePageContent.servicesSection.description}
               </Text>
             </VStack>
             <SimpleGrid columns={{ base: 1, md: 2 }} spacing={{ base: 6, md: 8 }} w="full">
               <ServiceCard
                 icon={FaUserTie}
-                title="Consultoria Técnica"
-                description="Consultoria técnica para projetos de telecomunicações, com foco em soluções personalizadas para cada cliente."
+                title={t.homePageContent.servicesSection.technicalConsulting.title}
+                description={t.homePageContent.servicesSection.technicalConsulting.description}
                 path="/services/technical-consulting"
               />
               <ServiceCard
                 icon={FaClipboardCheck}
-                title="Licenciamento & Busca"
-                description="Suporte completo em processos de licenciamento e busca e negociação de locais para implementação de infraestrutura."
+                title={t.homePageContent.servicesSection.licensing.title}
+                description={t.homePageContent.servicesSection.licensing.description}
                 path="/services/licensing"
               />
               <ServiceCard
                 icon={FaWifi}
-                title="Instalação de Small Cell"
-                description="Instalação profissional de small cells em diversos ambientes, garantindo cobertura e performance."
+                title={t.homePageContent.servicesSection.smallCell.title}
+                description={t.homePageContent.servicesSection.smallCell.description}
                 path="/services/small-cell"
               />
               <ServiceCard
                 icon={FaBroadcastTower}
-                title="Construção de Sites"
-                description="Execução completa de sites de telecomunicações, desde o projeto até a implementação final."
+                title={t.homePageContent.servicesSection.sitesConstruction.title}
+                description={t.homePageContent.servicesSection.sitesConstruction.description}
                 path="/services/sites-construction"
               />
             </SimpleGrid>
@@ -454,7 +454,7 @@ const Home = () => {
               transition="all 0.3s"
               leftIcon={<FaArrowRight />}
             >
-              Ver todos os serviços
+              {t.homePageContent.servicesSection.viewAllServices}
             </Button>
           </VStack>
         </Container>
@@ -465,12 +465,12 @@ const Home = () => {
         <Container maxW="1200px">
           <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={16} alignItems="center">
             <VStack spacing={6} align="flex-start">
-              <Heading color="gray.800">Sobre nós</Heading>
+              <Heading color="gray.800">{t.homePageContent.aboutSection.title}</Heading>
               <Text fontSize="lg" color="gray.700">
-                Com atuação no mercado de telecomunicações a Gávea foca nos serviços de construção civil e elétrica com larga experiência em sites Indoor, roof top e instalação de small cell's em equipamentos urbanos e fachadas, inclusive desenvolvimento de soluções, aquisição e licenciamento.
+                {t.homePageContent.aboutSection.description1}
               </Text>
               <Text fontSize="lg" color="gray.700">
-                Construindo para empresas Sharing ou diretamente para operadoras, executamos mais de 800 sites de todos os tipos e instalamos mais de 400 small cell's, serviços técnicos complementares de telecomunicações tais como investigação de espectro, drive test e elaboração de laudos radiométricos, tudo executado com equipamentos próprios.
+                {t.homePageContent.aboutSection.description2}
               </Text>
               <Button
                 as={RouterLink}
@@ -482,7 +482,7 @@ const Home = () => {
                   bg: 'rgba(42,82,118,0.9)'
                 }}
               >
-                Saiba mais
+                {t.homePageContent.aboutSection.learnMore}
               </Button>
             </VStack>
             <Box 
@@ -531,9 +531,9 @@ const Home = () => {
         <Container maxW="1200px">
           <VStack spacing={12}>
             <VStack spacing={4}>
-              <Heading textAlign="center">Entre em Contato</Heading>
+              <Heading textAlign="center">{t.homePageContent.contactSection.title}</Heading>
               <Text textAlign="center" fontSize="lg" color="gray.600" maxW="700px">
-                Estamos prontos para atender suas necessidades e desenvolver a melhor solução para seu projeto
+                {t.homePageContent.contactSection.subtitle}
               </Text>
             </VStack>
 
@@ -543,19 +543,19 @@ const Home = () => {
                 <VStack spacing={4} align="stretch" w="full">
                   <ContactInfo
                     icon={FaPhone}
-                    text="(21) 97198-4430"
+                    text={t.homePageContent.contactInfo.phone}
                   />
                   <ContactInfo
                     icon={FaEnvelope}
-                    text="contato@gaveatelecomunicacoes.com"
+                    text={t.homePageContent.contactInfo.email}
                   />
                   <ContactInfo
                     icon={FaMapMarkerAlt}
-                    text="Avenida Presidente Vargas 590/1309, Rio de Janeiro"
+                    text={t.homePageContent.contactInfo.address}
                   />
                   <ContactInfo
                     icon={FaClock}
-                    text="Segunda - Sexta 9:00 - 17:00"
+                    text={t.homePageContent.contactInfo.hours}
                   />
                 </VStack>
 
@@ -574,7 +574,7 @@ const Home = () => {
 
                 <Button
                   as="a"
-                  href={`https://wa.me/5521971984430?text=${encodeURIComponent('Olá! Gostaria de entrar em contato.')}`}
+                  href={`https://wa.me/5521971984430?text=${encodeURIComponent(t.homePageContent.contactInfo.whatsappMessage)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   size="lg"
@@ -582,7 +582,7 @@ const Home = () => {
                   leftIcon={<FaWhatsapp />}
                   w={{ base: 'full', md: 'auto' }}
                 >
-                  Fale conosco pelo WhatsApp
+                  {t.homePageContent.contactInfo.whatsappButton}
                 </Button>
               </VStack>
 
@@ -597,9 +597,9 @@ const Home = () => {
               >
                 <VStack spacing={4}>
                   <FormControl isRequired>
-                    <FormLabel color="rgba(42,82,118,1)">Nome</FormLabel>
+                    <FormLabel color="rgba(42,82,118,1)">{t.homePageContent.contactForm.name}</FormLabel>
                     <Input 
-                      placeholder="Seu nome completo"
+                      placeholder={t.homePageContent.contactForm.namePlaceholder}
                       bg="white"
                       borderColor="rgba(42,82,118,0.4)"
                       _hover={{ borderColor: "rgba(42,82,118,0.6)" }}
@@ -607,10 +607,10 @@ const Home = () => {
                   </FormControl>
 
                   <FormControl isRequired>
-                    <FormLabel color="rgba(42,82,118,1)">E-mail</FormLabel>
+                    <FormLabel color="rgba(42,82,118,1)">{t.homePageContent.contactForm.email}</FormLabel>
                     <Input 
                       type="email"
-                      placeholder="seu@email.com"
+                      placeholder={t.homePageContent.contactForm.emailPlaceholder}
                       bg="white"
                       borderColor="rgba(42,82,118,0.4)"
                       _hover={{ borderColor: "rgba(42,82,118,0.6)" }}
@@ -618,9 +618,9 @@ const Home = () => {
                   </FormControl>
 
                   <FormControl isRequired>
-                    <FormLabel color="rgba(42,82,118,1)">Assunto</FormLabel>
+                    <FormLabel color="rgba(42,82,118,1)">{t.homePageContent.contactForm.subject}</FormLabel>
                     <Input 
-                      placeholder="Assunto da mensagem"
+                      placeholder={t.homePageContent.contactForm.subjectPlaceholder}
                       bg="white"
                       borderColor="rgba(42,82,118,0.4)"
                       _hover={{ borderColor: "rgba(42,82,118,0.6)" }}
@@ -628,9 +628,9 @@ const Home = () => {
                   </FormControl>
 
                   <FormControl isRequired>
-                    <FormLabel color="rgba(42,82,118,1)">Mensagem</FormLabel>
+                    <FormLabel color="rgba(42,82,118,1)">{t.homePageContent.contactForm.message}</FormLabel>
                     <Textarea 
-                      placeholder="Digite sua mensagem"
+                      placeholder={t.homePageContent.contactForm.messagePlaceholder}
                       rows={4}
                       bg="white"
                       borderColor="rgba(42,82,118,0.4)"
@@ -647,7 +647,7 @@ const Home = () => {
                     _hover={{ bg: "rgba(42,82,118,0.9)" }}
                     mt={4}
                   >
-                    Entre em contato
+                    {t.homePageContent.contactForm.send}
                   </Button>
                 </VStack>
               </Box>

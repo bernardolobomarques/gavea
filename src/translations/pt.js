@@ -9,6 +9,7 @@ export const pt = {
   
   services: {
     title: 'Nossos Serviços',
+    subtitle: 'Oferecemos soluções completas em infraestrutura de telecomunicações, desde a aquisição e licenciamento até a implementação e manutenção.',
     smallCell: 'Instalação de Small Cell',
     sitesConstruction: 'Construção de Sites',
     locationAcquisition: 'Busca e Negociação de Locais',
@@ -16,7 +17,50 @@ export const pt = {
     maintenance: 'Manutenção Corretiva',
     technicalConsulting: 'Consultoria Técnica',
     viewAll: 'Ver Todos os Serviços',
-    learnMore: 'Saiba Mais'
+    learnMore: 'Saiba Mais',
+    cta: {
+      title: 'Pronto para começar seu projeto?',
+      description: 'Entre em contato conosco para discutir suas necessidades e descobrir como podemos ajudar no seu projeto de telecomunicações.',
+      button: 'Entre em contato'
+    },
+    features: {
+      smallCell: [
+        'Instalação em equipamentos urbanos',
+        'Implementação em fachadas',
+        'Cobertura indoor',
+        'Otimização de rede'
+      ],
+      sitesConstruction: [
+        'Sites Greenfield',
+        'Rooftop',
+        'Sites Indoor',
+        'Street Sites'
+      ],
+      locationAcquisition: [
+        'Análise de viabilidade',
+        'Negociação com proprietários',
+        'Avaliação técnica',
+        'Due diligence'
+      ],
+      licensing: [
+        'Licenças municipais',
+        'Aprovações ambientais',
+        'Documentação técnica',
+        'Gestão de processos'
+      ],
+      maintenance: [
+        'Manutenção preventiva',
+        'Correção de falhas',
+        'Upgrade de equipamentos',
+        'Monitoramento 24/7'
+      ],
+      technicalConsulting: [
+        'Análise de viabilidade',
+        'Projetos executivos',
+        'Laudos técnicos',
+        'Otimização de rede'
+      ]
+    }
   },
 
   home: {
@@ -241,43 +285,370 @@ export const pt = {
       title: 'Instalação de Small Cell',
       subtitle: 'Soluções avançadas para cobertura móvel em áreas de alta densidade',
       description: 'Nossa expertise em instalação de small cells abrange desde a análise inicial do local até a implementação e otimização final. Trabalhamos com as mais recentes tecnologias e métodos de instalação, garantindo cobertura eficiente e integração harmoniosa com o ambiente urbano.',
+      overview: 'Visão Geral',
       benefits: {
         title: 'Benefícios',
         coverage: 'Melhoria da Cobertura',
         capacity: 'Aumento da Capacidade',
         quality: 'Qualidade do Sinal',
-        efficiency: 'Eficiência Energética'
+        efficiency: 'Eficiência Energética',
+        items: [
+          'Melhor cobertura em áreas urbanas densas',
+          'Otimização da capacidade de rede',
+          'Instalação discreta e integrada à paisagem urbana',
+          'Rápida implementação',
+          'Baixo impacto visual',
+          'Solução ideal para eventos e locais com alto tráfego'
+        ]
+      },
+      applications: {
+        title: 'Aplicações',
+        urban: {
+          title: 'Áreas Urbanas',
+          description: 'Ideal para centros comerciais, áreas residenciais e distritos empresariais.'
+        },
+        equipment: {
+          title: 'Equipamentos Urbanos',
+          description: 'Integração com mobiliário urbano, postes e estruturas existentes.'
+        },
+        indoor: {
+          title: 'Ambientes Indoor',
+          description: 'Cobertura para shopping centers, escritórios e grandes empreendimentos.'
+        },
+        events: {
+          title: 'Eventos',
+          description: 'Soluções temporárias ou permanentes para locais de eventos.'
+        }
+      },
+      cta: {
+        title: 'Pronto para melhorar sua cobertura?',
+        description: 'Entre em contato conosco para discutir como nossas soluções de small cell podem beneficiar seu projeto.',
+        button: 'Entre em contato'
       }
     },
     
     sitesConstruction: {
       title: 'Construção de Sites',
       subtitle: 'Infraestrutura completa para telecomunicações',
-      description: 'Execução completa de sites de telecomunicações com expertise técnica. Desde Sites Greenfield até Rooftop, passando por Sites Indoor e Street Sites.'
+      description: 'Execução completa de sites de telecomunicações com expertise técnica. Desde Sites Greenfield até Rooftop, passando por Sites Indoor e Street Sites.',
+      heroTitle: 'Construção de Sites',
+      heroSubtitle: 'Construção completa de infraestrutura para telecomunicações com tecnologia de ponta.',
+      overview: {
+        title: 'Visão Geral',
+        description: 'Nossa experiência em construção de sites abrange todos os tipos de implementações, desde projetos greenfield até adaptações em estruturas existentes.'
+      },
+      benefits: {
+        title: 'Benefícios',
+        items: [
+          'Expertise em diferentes tipos de sites',
+          'Conformidade com normas técnicas',
+          'Equipe altamente qualificada',
+          'Gestão completa do projeto',
+          'Soluções personalizadas',
+          'Tecnologia de ponta'
+        ]
+      },
+      applications: {
+        title: 'Tipos de Sites',
+        greenfield: {
+          title: 'Greenfield',
+          description: 'Construção completa de sites em terrenos novos, incluindo fundação e infraestrutura.'
+        },
+        rooftop: {
+          title: 'Rooftop',
+          description: 'Instalação de sites em coberturas de edifícios com adaptações estruturais.'
+        },
+        indoor: {
+          title: 'Sites Indoor',
+          description: 'Implementação de sistemas de cobertura interna em grandes empreendimentos.'
+        },
+        outdoor: {
+          title: 'Sites Outdoor',
+          description: 'Construção de sites externos com alta resistência a intempéries.'
+        },
+        street: {
+          title: 'Street Sites',
+          description: 'Soluções urbanas integradas com mobiliário urbano e postes.'
+        }
+      },
+      projects: {
+        title: 'Nossos Projetos',
+        subtitle: 'Conheça alguns dos nossos projetos executados'
+      },
+      cta: {
+        title: 'Pronto para construir seu site?',
+        description: 'Entre em contato conosco para discutir seu projeto de construção de sites e desenvolver a melhor solução.',
+        button: 'Entre em contato'
+      }
     },
     
     locationAcquisition: {
       title: 'Busca e Negociação de Locais',
       subtitle: 'Encontramos os melhores locais para sua infraestrutura',
-      description: 'Identificação e aquisição estratégica de locais para implementação. Análise de viabilidade, negociação com proprietários, avaliação técnica e due diligence.'
+      description: 'Identificação e aquisição estratégica de locais para implementação. Análise de viabilidade, negociação com proprietários, avaliação técnica e due diligence.',
+      heroTitle: 'Busca e Negociação de Locais',
+      heroSubtitle: 'Identificação e negociação estratégica de locais para implementação de infraestrutura de telecomunicações.',
+      overview: {
+        title: 'Visão Geral',
+        description: 'Nossa equipe especializada em aquisição de locais trabalha para identificar e garantir os melhores pontos para sua infraestrutura de telecomunicações. Realizamos todo o processo de forma profissional, desde a análise inicial até a finalização do contrato.'
+      },
+      benefits: {
+        title: 'Benefícios',
+        items: [
+          'Análise estratégica de localização',
+          'Negociação especializada',
+          'Due diligence completa',
+          'Gestão de documentação',
+          'Avaliação técnica detalhada',
+          'Otimização de custos'
+        ]
+      },
+      services: {
+        title: 'Nossos Serviços',
+        prospecting: {
+          title: 'Prospecção de Locais',
+          description: 'Identificação e avaliação de locais estratégicos para implementação de infraestrutura.'
+        },
+        negotiation: {
+          title: 'Negociação',
+          description: 'Condução profissional de negociações com proprietários e partes interessadas.'
+        },
+        legalAnalysis: {
+          title: 'Análise Legal',
+          description: 'Verificação completa da documentação e situação legal dos imóveis.'
+        },
+        feasibility: {
+          title: 'Viabilidade Técnica',
+          description: 'Avaliação detalhada das condições técnicas e estruturais do local.'
+        }
+      },
+      gallery: {
+        title: 'Portfólio de Locais',
+        alt1: 'Local para instalação em rooftop',
+        alt2: 'Site em rooftop',
+        alt3: 'Instalação em cobertura'
+      },
+      cta: {
+        title: 'Precisa encontrar o local ideal?',
+        description: 'Entre em contato para discutir suas necessidades de localização e descobrir como podemos ajudar no seu projeto.',
+        button: 'Entre em contato'
+      }
     },
     
     licensing: {
       title: 'Licenciamento',
       subtitle: 'Suporte completo em processos regulatórios',
-      description: 'Gestão completa do processo de licenciamento e regularização. Licenças municipais, aprovações ambientais, documentação técnica e gestão de processos.'
+      description: 'Gestão completa do processo de licenciamento e regularização. Licenças municipais, aprovações ambientais, documentação técnica e gestão de processos.',
+      heroTitle: 'Licenciamento',
+      heroSubtitle: 'Gestão completa do processo de licenciamento e regularização de infraestruturas de telecomunicações.',
+      overview: {
+        title: 'Visão Geral',
+        description: 'Nossa equipe especializada em licenciamento garante que sua infraestrutura esteja em total conformidade com as legislações vigentes. Cuidamos de todo o processo burocrático, desde a preparação da documentação até a obtenção das licenças necessárias.'
+      },
+      benefits: {
+        title: 'Benefícios',
+        items: [
+          'Agilidade no processo de licenciamento',
+          'Conformidade com legislações',
+          'Redução de riscos legais',
+          'Acompanhamento personalizado',
+          'Expertise regulatória',
+          'Documentação completa'
+        ]
+      },
+      services: {
+        title: 'Nossos Serviços',
+        municipal: {
+          title: 'Licenciamento Municipal',
+          description: 'Obtenção de alvarás e licenças junto às prefeituras e órgãos municipais.'
+        },
+        environmental: {
+          title: 'Licenciamento Ambiental',
+          description: 'Gestão de processos junto aos órgãos ambientais e estudos de impacto.'
+        },
+        regularization: {
+          title: 'Regularização',
+          description: 'Regularização de estruturas existentes e adequação às normas vigentes.'
+        },
+        processManagement: {
+          title: 'Gestão de Processos',
+          description: 'Acompanhamento integral dos processos de licenciamento e documentação.'
+        }
+      },
+      gallery: {
+        title: 'Projetos Licenciados',
+        alt1: 'Site licenciado em rooftop',
+        alt2: 'Site em processo de licenciamento',
+        alt3: 'Projeto licenciado'
+      },
+      cta: {
+        title: 'Precisa regularizar sua infraestrutura?',
+        description: 'Entre em contato para discutir suas necessidades de licenciamento e descobrir como podemos ajudar no seu projeto.',
+        button: 'Entre em contato'
+      }
     },
     
     maintenance: {
       title: 'Manutenção Corretiva',
       subtitle: 'Manutenção especializada quando você mais precisa',
-      description: 'Serviços de manutenção preventiva e corretiva em infraestruturas. Manutenção preventiva, correção de falhas, upgrade de equipamentos e monitoramento 24/7.'
+      description: 'Serviços de manutenção preventiva e corretiva em infraestruturas. Manutenção preventiva, correção de falhas, upgrade de equipamentos e monitoramento 24/7.',
+      heroTitle: 'Manutenção Especializada',
+      heroSubtitle: 'Serviços completos de manutenção preventiva e corretiva para infraestrutura de telecomunicações.',
+      overview: {
+        title: 'Visão Geral',
+        description: 'Nossa equipe de manutenção atua de forma preventiva e corretiva para garantir o funcionamento contínuo de sua infraestrutura de telecomunicações.'
+      },
+      benefits: {
+        title: 'Benefícios',
+        items: [
+          'Manutenção corretiva especializada',
+          'Atendimento 24/7 para emergências',
+          'Equipe técnica especializada',
+          'Relatórios detalhados',
+          'Gestão de ativos eficiente',
+          'Redução de downtime'
+        ]
+      },
+      services: {
+        title: 'Nossos Serviços',
+        preventive: {
+          title: 'Manutenção Preventiva',
+          description: 'Inspeções regulares e manutenção programada para garantir o funcionamento ideal dos equipamentos.'
+        },
+        emergency: {
+          title: 'Atendimento Emergencial',
+          description: 'Pronto atendimento para correção de falhas e restauração de serviços.'
+        },
+        monitoring: {
+          title: 'Monitoramento 24/7',
+          description: 'Monitoramento contínuo da infraestrutura para detecção prévia de problemas.'
+        },
+        reports: {
+          title: 'Relatórios Técnicos',
+          description: 'Documentação completa de todas as atividades de manutenção realizadas.'
+        }
+      },
+      cta: {
+        title: 'Precisa de manutenção especializada?',
+        description: 'Entre em contato para conhecer nossos planos de manutenção e garantir a continuidade operacional de sua infraestrutura.',
+        button: 'Entre em contato'
+      }
     },
     
     technicalConsulting: {
       title: 'Consultoria Técnica',
       subtitle: 'Expertise técnica para otimizar seus projetos',
-      description: 'Consultoria especializada em projetos de telecomunicações. Análise de viabilidade, projetos executivos, laudos técnicos e otimização de rede.'
+      description: 'Consultoria especializada em projetos de telecomunicações. Análise de viabilidade, projetos executivos, laudos técnicos e otimização de rede.',
+      heroSubtitle: 'Consultoria especializada em projetos de telecomunicações, desde a concepção até a otimização.',
+      overview: {
+        title: 'Visão Geral',
+        description: 'Nossa equipe de consultores técnicos oferece suporte especializado para otimizar seus projetos de telecomunicações. Com vasta experiência no setor, desenvolvemos soluções personalizadas que atendem às necessidades específicas de cada cliente.'
+      },
+      benefits: {
+        title: 'Benefícios',
+        items: [
+          'Análise detalhada de viabilidade técnica',
+          'Projetos executivos customizados',
+          'Otimização de performance da rede',
+          'Laudos técnicos especializados',
+          'Suporte técnico contínuo',
+          'Redução de custos operacionais'
+        ]
+      },
+      services: {
+        title: 'Nossos Serviços',
+        feasibility: {
+          title: 'Análise de Viabilidade',
+          description: 'Estudos técnicos para avaliar a viabilidade de projetos de telecomunicações.'
+        },
+        projects: {
+          title: 'Projetos Executivos',
+          description: 'Desenvolvimento de projetos técnicos detalhados para implementação.'
+        },
+        optimization: {
+          title: 'Otimização de Rede',
+          description: 'Análise e otimização de performance de redes de telecomunicações.'
+        },
+        reports: {
+          title: 'Laudos Técnicos',
+          description: 'Elaboração de laudos técnicos especializados e certificações.'
+        }
+      },
+      cta: {
+        title: 'Precisa de consultoria especializada?',
+        description: 'Entre em contato para discutir seu projeto e descobrir como nossa consultoria técnica pode ajudar a alcançar seus objetivos.',
+        button: 'Entre em contato'
+      }
+    },
+    
+    common: {
+      overview: 'Visão Geral',
+      benefits: 'Benefícios',
+      applications: 'Aplicações',
+      ourServices: 'Nossos Serviços'
+    }
+  },
+
+  // Traduções adicionais para a página Home
+  homePageContent: {
+    servicesSection: {
+      description: 'Oferecemos uma gama completa de serviços especializados em infraestrutura de telecomunicações',
+      viewAllServices: 'Ver todos os serviços',
+      technicalConsulting: {
+        title: 'Consultoria Técnica',
+        description: 'Consultoria técnica para projetos de telecomunicações, com foco em soluções personalizadas para cada cliente.'
+      },
+      licensing: {
+        title: 'Licenciamento & Busca',
+        description: 'Suporte completo em processos de licenciamento e busca e negociação de locais para implementação de infraestrutura.'
+      },
+      smallCell: {
+        title: 'Instalação de Small Cell',
+        description: 'Instalação profissional de small cells em diversos ambientes, garantindo cobertura e performance.'
+      },
+      sitesConstruction: {
+        title: 'Construção de Sites',
+        description: 'Execução completa de sites de telecomunicações, desde o projeto até a implementação final.'
+      }
+    },
+    
+    aboutSection: {
+      title: 'Sobre nós',
+      description1: 'Com atuação no mercado de telecomunicações a Gávea foca nos serviços de construção civil e elétrica com larga experiência em sites Indoor, roof top e instalação de small cell\'s em equipamentos urbanos e fachadas, inclusive desenvolvimento de soluções, aquisição e licenciamento.',
+      description2: 'Construindo para empresas Sharing ou diretamente para operadoras, executamos mais de 800 sites de todos os tipos e instalamos mais de 400 small cell\'s, serviços técnicos complementares de telecomunicações tais como investigação de espectro, drive test e elaboração de laudos radiométricos, tudo executado com equipamentos próprios.',
+      learnMore: 'Saiba mais'
+    },
+    
+    contactInfo: {
+      phone: '(21) 97198-4430',
+      email: 'contato@gaveatelecomunicacoes.com',
+      address: 'Avenida Presidente Vargas 590/1309, Rio de Janeiro',
+      hours: 'Segunda - Sexta 9:00 - 17:00',
+      whatsappButton: 'Fale conosco pelo WhatsApp',
+      whatsappMessage: 'Olá! Gostaria de entrar em contato.'
+    },
+    
+    contactForm: {
+      title: 'Entre em contato',
+      subtitle: 'Fale conosco e vamos transformar suas ideias em realidade',
+      name: 'Nome',
+      namePlaceholder: 'Seu nome completo',
+      email: 'E-mail',
+      emailPlaceholder: 'seu@email.com',
+      subject: 'Assunto',
+      subjectPlaceholder: 'Assunto da mensagem',
+      message: 'Mensagem',
+      messagePlaceholder: 'Digite sua mensagem',
+      send: 'Entre em contato'
+    },
+    
+    statsSection: {
+      title: 'Nossos números'
+    },
+    
+    contactSection: {
+      title: 'Entre em Contato',
+      subtitle: 'Estamos prontos para atender suas necessidades e desenvolver a melhor solução para seu projeto'
     }
   },
 
@@ -305,6 +676,7 @@ export const pt = {
   footer: {
     companyInfo: 'Informações da Empresa',
     whatsapp: 'WhatsApp',
-    rights: 'Todos os direitos reservados.'
+    rights: 'Todos os direitos reservados.',
+    developedBy: 'Desenvolvido por'
   }
 };

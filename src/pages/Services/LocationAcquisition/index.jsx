@@ -17,6 +17,7 @@ import {
 import { motion } from 'framer-motion';
 import { Link as RouterLink } from 'react-router-dom';
 import { FaSearchLocation, FaCheckCircle, FaArrowRight } from 'react-icons/fa';
+import { useTranslation } from '../../../hooks/useTranslation';
 import torre2 from '../../../assets/torre2.png';
 import rooftop1 from '../../../assets/rooftop1.JPG';
 import rooftop2 from '../../../assets/rooftop2.jpg';
@@ -25,31 +26,26 @@ import rooftop3 from '../../../assets/rooftop3.jpeg';
 const MotionBox = motion(Box);
 
 const LocationAcquisition = () => {
-  const benefits = [
-    'Análise estratégica de localização',
-    'Negociação especializada',
-    'Due diligence completa',
-    'Gestão de documentação',
-    'Avaliação técnica detalhada',
-    'Otimização de custos'
-  ];
+  const { t } = useTranslation();
 
+  const benefits = t.servicePages.locationAcquisition.benefits.items;
+  
   const services = [
     {
-      title: 'Prospecção de Locais',
-      description: 'Identificação e avaliação de locais estratégicos para implementação de infraestrutura.'
+      title: t.servicePages.locationAcquisition.services.prospecting.title,
+      description: t.servicePages.locationAcquisition.services.prospecting.description
     },
     {
-      title: 'Negociação',
-      description: 'Condução profissional de negociações com proprietários e partes interessadas.'
+      title: t.servicePages.locationAcquisition.services.negotiation.title,
+      description: t.servicePages.locationAcquisition.services.negotiation.description
     },
     {
-      title: 'Análise Legal',
-      description: 'Verificação completa da documentação e situação legal dos imóveis.'
+      title: t.servicePages.locationAcquisition.services.legalAnalysis.title,
+      description: t.servicePages.locationAcquisition.services.legalAnalysis.description
     },
     {
-      title: 'Viabilidade Técnica',
-      description: 'Avaliação detalhada das condições técnicas e estruturais do local.'
+      title: t.servicePages.locationAcquisition.services.feasibility.title,
+      description: t.servicePages.locationAcquisition.services.feasibility.description
     }
   ];
 
@@ -81,12 +77,11 @@ const LocationAcquisition = () => {
             <Flex align="center" gap={4}>
               <Icon as={FaSearchLocation} w={10} h={10} />
               <Heading as="h1" size="2xl">
-                Busca e Negociação de Locais
+                {t.servicePages.locationAcquisition.heroTitle}
               </Heading>
             </Flex>
             <Text fontSize="xl" maxW="700px">
-              Identificação e negociação estratégica de locais para implementação de
-              infraestrutura de telecomunicações.
+              {t.servicePages.locationAcquisition.heroSubtitle}
             </Text>
           </VStack>
         </Container>
@@ -99,20 +94,17 @@ const LocationAcquisition = () => {
             {/* Overview Section */}
             <VStack spacing={6} align="stretch" w="full">
               <Heading size="xl" color="rgba(42,82,118,1)">
-                Visão Geral
+                {t.servicePages.locationAcquisition.overview.title}
               </Heading>
               <Text fontSize="lg" color="gray.600">
-                Nossa equipe especializada em aquisição de locais trabalha para identificar
-                e garantir os melhores pontos para sua infraestrutura de telecomunicações.
-                Realizamos todo o processo de forma profissional, desde a análise inicial
-                até a finalização do contrato.
+                {t.servicePages.locationAcquisition.overview.description}
               </Text>
             </VStack>
 
             {/* Benefits Section */}
             <VStack spacing={6} align="stretch" w="full">
               <Heading size="lg" color="rgba(42,82,118,1)">
-                Benefícios
+                {t.servicePages.locationAcquisition.benefits.title}
               </Heading>
               <List spacing={3}>
                 {benefits.map((benefit, index) => (
@@ -132,7 +124,7 @@ const LocationAcquisition = () => {
             {/* Services Section */}
             <VStack spacing={6} align="stretch" w="full">
               <Heading size="lg" color="rgba(42,82,118,1)">
-                Nossos Serviços
+                {t.servicePages.locationAcquisition.services.title}
               </Heading>
               <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8}>
                 {services.map((service, index) => (
@@ -159,7 +151,7 @@ const LocationAcquisition = () => {
             {/* Location Gallery */}
             <VStack spacing={6} align="stretch" w="full">
               <Heading size="lg" color="rgba(42,82,118,1)">
-                Portfólio de Locais
+                {t.servicePages.locationAcquisition.gallery.title}
               </Heading>
               <SimpleGrid columns={{ base: 1, md: 3 }} spacing={8}>
                 <Box
@@ -170,7 +162,7 @@ const LocationAcquisition = () => {
                 >
                   <Image
                     src={rooftop1}
-                    alt="Local para instalação em rooftop"
+                    alt={t.servicePages.locationAcquisition.gallery.alt1}
                     w="100%"
                     h="100%"
                     objectFit="cover"
@@ -186,7 +178,7 @@ const LocationAcquisition = () => {
                 >
                   <Image
                     src={rooftop2}
-                    alt="Site em rooftop"
+                    alt={t.servicePages.locationAcquisition.gallery.alt2}
                     w="100%"
                     h="100%"
                     objectFit="cover"
@@ -202,7 +194,7 @@ const LocationAcquisition = () => {
                 >
                   <Image
                     src={rooftop3}
-                    alt="Instalação em cobertura"
+                    alt={t.servicePages.locationAcquisition.gallery.alt3}
                     w="100%"
                     h="100%"
                     objectFit="cover"
@@ -224,11 +216,10 @@ const LocationAcquisition = () => {
             >
               <VStack spacing={6}>
                 <Heading size="lg" color="rgba(42,82,118,1)">
-                  Precisa encontrar o local ideal?
+                  {t.servicePages.locationAcquisition.cta.title}
                 </Heading>
                 <Text fontSize="lg" color="gray.600" maxW="700px">
-                  Entre em contato para discutir suas necessidades de localização
-                  e descobrir como podemos ajudar no seu projeto.
+                  {t.servicePages.locationAcquisition.cta.description}
                 </Text>
                 <Button
                   as={RouterLink}
@@ -244,7 +235,7 @@ const LocationAcquisition = () => {
                   }}
                   transition="all 0.3s"
                 >
-                  Entre em contato
+                  {t.servicePages.locationAcquisition.cta.button}
                 </Button>
               </VStack>
             </Box>

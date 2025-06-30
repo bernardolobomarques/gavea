@@ -18,34 +18,31 @@ import { Link as RouterLink } from 'react-router-dom';
 import { FaChartLine, FaCheckCircle, FaArrowRight } from 'react-icons/fa';
 import torre2 from '../../../assets/torre2.png';
 
+import { useTranslation } from '../../../hooks/useTranslation';
+
 const MotionBox = motion(Box);
 
 const TechnicalConsulting = () => {
-  const benefits = [
-    'Análise técnica especializada',
-    'Otimização de recursos',
-    'Soluções personalizadas',
-    'Expertise de mercado',
-    'Suporte contínuo',
-    'Inovação tecnológica'
-  ];
+  const { t } = useTranslation();
+  
+  const benefits = t.servicePages.technicalConsulting.benefits.items;
 
   const services = [
     {
-      title: 'Análise de Viabilidade',
-      description: 'Estudos técnicos e econômicos para avaliar a viabilidade de projetos.'
+      title: t.servicePages.technicalConsulting.services.feasibility.title,
+      description: t.servicePages.technicalConsulting.services.feasibility.description
     },
     {
-      title: 'Projetos Executivos',
-      description: 'Desenvolvimento de projetos detalhados para implementação.'
+      title: t.servicePages.technicalConsulting.services.projects.title,
+      description: t.servicePages.technicalConsulting.services.projects.description
     },
     {
-      title: 'Laudos Técnicos',
-      description: 'Elaboração de laudos e relatórios técnicos especializados.'
+      title: t.servicePages.technicalConsulting.services.reports.title,
+      description: t.servicePages.technicalConsulting.services.reports.description
     },
     {
-      title: 'Otimização de Rede',
-      description: 'Análise e melhorias para maximizar o desempenho da infraestrutura.'
+      title: t.servicePages.technicalConsulting.services.optimization.title,
+      description: t.servicePages.technicalConsulting.services.optimization.description
     }
   ];
 
@@ -77,12 +74,11 @@ const TechnicalConsulting = () => {
             <Flex align="center" gap={4}>
               <Icon as={FaChartLine} w={10} h={10} />
               <Heading as="h1" size="2xl">
-                Consultoria Técnica
+                {t.servicePages.technicalConsulting.title}
               </Heading>
             </Flex>
             <Text fontSize="xl" maxW="700px">
-              Consultoria especializada em projetos de telecomunicações,
-              desde a concepção até a otimização.
+              {t.servicePages.technicalConsulting.heroSubtitle}
             </Text>
           </VStack>
         </Container>
@@ -95,20 +91,17 @@ const TechnicalConsulting = () => {
             {/* Overview Section */}
             <VStack spacing={6} align="stretch" w="full">
               <Heading size="xl" color="rgba(42,82,118,1)">
-                Visão Geral
+                {t.servicePages.technicalConsulting.overview.title}
               </Heading>
               <Text fontSize="lg" color="gray.600">
-                Nossa equipe de consultores técnicos oferece suporte especializado
-                para otimizar seus projetos de telecomunicações. Com vasta experiência
-                no setor, desenvolvemos soluções personalizadas que atendem às
-                necessidades específicas de cada cliente.
+                {t.servicePages.technicalConsulting.overview.description}
               </Text>
             </VStack>
 
             {/* Benefits Section */}
             <VStack spacing={6} align="stretch" w="full">
               <Heading size="lg" color="rgba(42,82,118,1)">
-                Benefícios
+                {t.servicePages.technicalConsulting.benefits.title}
               </Heading>
               <List spacing={3}>
                 {benefits.map((benefit, index) => (
@@ -128,7 +121,7 @@ const TechnicalConsulting = () => {
             {/* Services Section */}
             <VStack spacing={6} align="stretch" w="full">
               <Heading size="lg" color="rgba(42,82,118,1)">
-                Nossos Serviços
+                {t.servicePages.technicalConsulting.services.title}
               </Heading>
               <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8}>
                 {services.map((service, index) => (
@@ -163,11 +156,10 @@ const TechnicalConsulting = () => {
             >
               <VStack spacing={6}>
                 <Heading size="lg" color="rgba(42,82,118,1)">
-                  Precisa de consultoria especializada?
+                  {t.servicePages.technicalConsulting.cta.title}
                 </Heading>
                 <Text fontSize="lg" color="gray.600" maxW="700px">
-                  Entre em contato para discutir seu projeto e descobrir como
-                  nossa consultoria técnica pode ajudar a alcançar seus objetivos.
+                  {t.servicePages.technicalConsulting.cta.description}
                 </Text>
                 <Button
                   as={RouterLink}
@@ -183,7 +175,7 @@ const TechnicalConsulting = () => {
                   }}
                   transition="all 0.3s"
                 >
-                  Entre em contato
+                  {t.servicePages.technicalConsulting.cta.button}
                 </Button>
               </VStack>
             </Box>

@@ -34,7 +34,7 @@ const Footer = () => {
         {/* Credits */}
         <Box textAlign="center" pt={{ base: 6, md: 8 }}>
           <Text fontSize="xs">
-            Desenvolvido por{' '}
+            {t.footer.developedBy}{' '}
             <Link
               href="#"
               fontWeight="bold"

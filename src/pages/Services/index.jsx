@@ -102,74 +102,44 @@ const Services = () => {
   const services = [
     {
       icon: FaWifi,
-      title: t.services.smallCell,
-      description: t.servicePages.smallCell.description,
-      features: [
-        'Instalação em equipamentos urbanos',
-        'Implementação em fachadas',
-        'Cobertura indoor',
-        'Otimização de rede',
-      ],
+      title: t('services.smallCell'),
+      description: t('servicePages.smallCell.description'),
+      features: t('services.features.smallCell'),
       path: '/services/small-cell'
     },
     {
       icon: FaBroadcastTower,
-      title: t.services.sitesConstruction,
-      description: t.servicePages.sitesConstruction.description,
-      features: [
-        'Sites Greenfield',
-        'Rooftop',
-        'Sites Indoor',
-        'Street Sites',
-      ],
+      title: t('services.sitesConstruction'),
+      description: t('servicePages.sitesConstruction.description'),
+      features: t('services.features.sitesConstruction'),
       path: '/services/sites-construction'
     },
     {
       icon: FaSearchLocation,
-      title: t.services.locationAcquisition,
-      description: t.servicePages.locationAcquisition.description,
-      features: [
-        'Análise de viabilidade',
-        'Negociação com proprietários',
-        'Avaliação técnica',
-        'Due diligence',
-      ],
+      title: t('services.locationAcquisition'),
+      description: t('servicePages.locationAcquisition.description'),
+      features: t('services.features.locationAcquisition'),
       path: '/services/location-acquisition'
     },
     {
       icon: FaFileContract,
-      title: t.services.licensing,
-      description: t.servicePages.licensing.description,
-      features: [
-        'Licenças municipais',
-        'Aprovações ambientais',
-        'Documentação técnica',
-        'Gestão de processos',
-      ],
+      title: t('services.licensing'),
+      description: t('servicePages.licensing.description'),
+      features: t('services.features.licensing'),
       path: '/services/licensing'
     },
     {
       icon: FaTools,
-      title: t.services.maintenance,
-      description: t.servicePages.maintenance.description,
-      features: [
-        'Manutenção preventiva',
-        'Correção de falhas',
-        'Upgrade de equipamentos',
-        'Monitoramento 24/7',
-      ],
+      title: t('services.maintenance'),
+      description: t('servicePages.maintenance.description'),
+      features: t('services.features.maintenance'),
       path: '/services/maintenance'
     },
     {
       icon: FaChartLine,
-      title: t.services.technicalConsulting,
-      description: t.servicePages.technicalConsulting.description,
-      features: [
-        'Análise de viabilidade',
-        'Projetos executivos',
-        'Laudos técnicos',
-        'Otimização de rede',
-      ],
+      title: t('services.technicalConsulting'),
+      description: t('servicePages.technicalConsulting.description'),
+      features: t('services.features.technicalConsulting'),
       path: '/services/technical-consulting'
     },
   ];
@@ -204,10 +174,10 @@ const Services = () => {
               size="2xl"
               maxW="800px"
             >
-              {t.services.title}
+              {t('services.title')}
             </Heading>
             <Text fontSize="xl" maxW="700px">
-              Oferecemos soluções completas em infraestrutura de telecomunicações, desde a aquisição e licenciamento até a implementação e manutenção.
+              {t('services.subtitle')}
             </Text>
           </VStack>
         </Container>
@@ -228,10 +198,10 @@ const Services = () => {
             <Box textAlign="center" py={10}>
               <VStack spacing={6}>
                 <Heading size="lg" color="rgba(42,82,118,1)">
-                  Pronto para começar seu projeto?
+                  {t('services.cta.title')}
                 </Heading>
                 <Text fontSize="lg" color="gray.600" maxW="700px">
-                  Entre em contato conosco para discutir suas necessidades e descobrir como podemos ajudar no seu projeto de telecomunicações.
+                  {t('services.cta.description')}
                 </Text>
                 <Button
                   as={RouterLink}
@@ -246,7 +216,7 @@ const Services = () => {
                   }}
                   transition="all 0.3s"
                 >
-                  {t.home.hero.contact}
+                  {t('services.cta.button')}
                 </Button>
               </VStack>
             </Box>

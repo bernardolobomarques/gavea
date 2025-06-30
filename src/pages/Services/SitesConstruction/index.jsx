@@ -27,31 +27,30 @@ import starlink1 from '../../../assets/starlink1.jpg';
 const MotionBox = motion(Box);
 
 const SitesConstruction = () => {
-  const benefits = [
-    'Expertise em diferentes tipos de sites',
-    'Conformidade com normas técnicas',
-    'Equipe altamente qualificada',
-    'Gestão completa do projeto',
-    'Soluções personalizadas',
-    'Tecnologia de ponta'
-  ];
+  const { t } = useTranslation();
+  
+  const benefits = t.servicePages.sitesConstruction.benefits.items;
 
   const applications = [
     {
-      title: 'Greenfield',
-      description: 'Construção completa de sites em terrenos novos, incluindo fundação e infraestrutura.'
+      title: t.servicePages.sitesConstruction.applications.greenfield.title,
+      description: t.servicePages.sitesConstruction.applications.greenfield.description
     },
     {
-      title: 'Rooftop',
-      description: 'Instalação de sites em coberturas de edifícios com adaptações estruturais.'
+      title: t.servicePages.sitesConstruction.applications.rooftop.title,
+      description: t.servicePages.sitesConstruction.applications.rooftop.description
     },
     {
-      title: 'Sites Indoor',
-      description: 'Implementação de sistemas de cobertura interna em grandes empreendimentos.'
+      title: t.servicePages.sitesConstruction.applications.indoor.title,
+      description: t.servicePages.sitesConstruction.applications.indoor.description
     },
     {
-      title: 'Street Sites',
-      description: 'Soluções urbanas integradas com mobiliário urbano e postes.'
+      title: t.servicePages.sitesConstruction.applications.outdoor.title,
+      description: t.servicePages.sitesConstruction.applications.outdoor.description
+    },
+    {
+      title: t.servicePages.sitesConstruction.applications.street.title,
+      description: t.servicePages.sitesConstruction.applications.street.description
     }
   ];
 
@@ -83,12 +82,11 @@ const SitesConstruction = () => {
             <Flex align="center" gap={4}>
               <Icon as={FaBroadcastTower} w={10} h={10} />
               <Heading as="h1" size="2xl">
-                Construção de Sites
+                {t.servicePages.sitesConstruction.heroTitle}
               </Heading>
             </Flex>
             <Text fontSize="xl" maxW="700px">
-              Soluções completas para construção de sites de telecomunicações,
-              desde o projeto até a implementação final.
+              {t.servicePages.sitesConstruction.heroSubtitle}
             </Text>
           </VStack>
         </Container>
@@ -101,19 +99,17 @@ const SitesConstruction = () => {
             {/* Overview Section */}
             <VStack spacing={6} align="stretch" w="full">
               <Heading size="xl" color="rgba(42,82,118,1)">
-                Visão Geral
+                {t.servicePages.sitesConstruction.overview.title}
               </Heading>
               <Text fontSize="lg" color="gray.600">
-                Nossa experiência em construção de sites abrange todos os tipos de implementações,
-                desde sites greenfield até soluções indoor complexas. Garantimos qualidade e
-                conformidade em cada etapa do projeto, com foco na eficiência e durabilidade.
+                {t.servicePages.sitesConstruction.overview.description}
               </Text>
             </VStack>
 
             {/* Benefits Section */}
             <VStack spacing={6} align="stretch" w="full">
               <Heading size="lg" color="rgba(42,82,118,1)">
-                Benefícios
+                {t.servicePages.sitesConstruction.benefits.title}
               </Heading>
               <List spacing={3}>
                 {benefits.map((benefit, index) => (
@@ -133,7 +129,7 @@ const SitesConstruction = () => {
             {/* Applications Section */}
             <VStack spacing={6} align="stretch" w="full">
               <Heading size="lg" color="rgba(42,82,118,1)">
-                Tipos de Sites
+                {t.servicePages.sitesConstruction.applications.title}
               </Heading>
               <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8}>
                 {applications.map((app, index) => (
@@ -160,7 +156,7 @@ const SitesConstruction = () => {
             {/* Project Gallery */}
             <VStack spacing={6} align="stretch" w="full">
               <Heading size="lg" color="rgba(42,82,118,1)">
-                Nossos Projetos
+                {t.servicePages.sitesConstruction.projects.title}
               </Heading>
               <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8}>
                 <Box
@@ -243,11 +239,10 @@ const SitesConstruction = () => {
             >
               <VStack spacing={6}>
                 <Heading size="lg" color="rgba(42,82,118,1)">
-                  Pronto para construir seu site?
+                  {t.servicePages.sitesConstruction.cta.title}
                 </Heading>
                 <Text fontSize="lg" color="gray.600" maxW="700px">
-                  Entre em contato conosco para discutir seu projeto de construção
-                  de site e descobrir a melhor solução para suas necessidades.
+                  {t.servicePages.sitesConstruction.cta.description}
                 </Text>
                 <Button
                   as={RouterLink}
@@ -263,7 +258,7 @@ const SitesConstruction = () => {
                   }}
                   transition="all 0.3s"
                 >
-                  Entre em contato
+                  {t.servicePages.sitesConstruction.cta.button}
                 </Button>
               </VStack>
             </Box>

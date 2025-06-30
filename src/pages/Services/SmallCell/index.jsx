@@ -27,31 +27,24 @@ const MotionBox = motion(Box);
 const SmallCell = () => {
   const { t } = useTranslation();
   
-  const benefits = [
-    'Melhor cobertura em áreas urbanas densas',
-    'Otimização da capacidade de rede',
-    'Instalação discreta e integrada à paisagem urbana',
-    'Rápida implementação',
-    'Baixo impacto visual',
-    'Solução ideal para eventos e locais com alto tráfego'
-  ];
+  const benefits = t.servicePages.smallCell.benefits.items;
 
   const applications = [
     {
-      title: 'Áreas Urbanas',
-      description: 'Ideal para centros comerciais, áreas residenciais e distritos empresariais.'
+      title: t.servicePages.smallCell.applications.urban.title,
+      description: t.servicePages.smallCell.applications.urban.description
     },
     {
-      title: 'Equipamentos Urbanos',
-      description: 'Integração com mobiliário urbano, postes e estruturas existentes.'
+      title: t.servicePages.smallCell.applications.equipment.title,
+      description: t.servicePages.smallCell.applications.equipment.description
     },
     {
-      title: 'Ambientes Indoor',
-      description: 'Cobertura para shopping centers, escritórios e grandes empreendimentos.'
+      title: t.servicePages.smallCell.applications.indoor.title,
+      description: t.servicePages.smallCell.applications.indoor.description
     },
     {
-      title: 'Eventos',
-      description: 'Soluções temporárias ou permanentes para locais de eventos.'
+      title: t.servicePages.smallCell.applications.events.title,
+      description: t.servicePages.smallCell.applications.events.description
     }
   ];
 
@@ -100,7 +93,7 @@ const SmallCell = () => {
             {/* Overview Section */}
             <VStack spacing={6} align="stretch" w="full">
               <Heading size="xl" color="rgba(42,82,118,1)">
-                Visão Geral
+                {t.servicePages.smallCell.overview}
               </Heading>
               <Text fontSize="lg" color="gray.600">
                 {t.servicePages.smallCell.description}
@@ -130,7 +123,7 @@ const SmallCell = () => {
             {/* Applications Section */}
             <VStack spacing={6} align="stretch" w="full">
               <Heading size="lg" color="rgba(42,82,118,1)">
-                Aplicações
+                {t.servicePages.smallCell.applications.title}
               </Heading>
               <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8}>
                 {applications.map((app, index) => (
@@ -201,11 +194,10 @@ const SmallCell = () => {
             >
               <VStack spacing={6}>
                 <Heading size="lg" color="rgba(42,82,118,1)">
-                  Pronto para melhorar sua cobertura?
+                  {t.servicePages.smallCell.cta.title}
                 </Heading>
                 <Text fontSize="lg" color="gray.600" maxW="700px">
-                  Entre em contato conosco para discutir como nossas soluções de small cell
-                  podem beneficiar seu projeto.
+                  {t.servicePages.smallCell.cta.description}
                 </Text>
                 <Button
                   as={RouterLink}
@@ -221,7 +213,7 @@ const SmallCell = () => {
                   }}
                   transition="all 0.3s"
                 >
-                  Entre em contato
+                  {t.servicePages.smallCell.cta.button}
                 </Button>
               </VStack>
             </Box>

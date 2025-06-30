@@ -9,6 +9,7 @@ export const en = {
   
   services: {
     title: 'Our Services',
+    subtitle: 'We offer complete solutions in telecommunications infrastructure, from acquisition and licensing to implementation and maintenance.',
     smallCell: 'Small Cell Installation',
     sitesConstruction: 'Site Construction',
     locationAcquisition: 'Location Search & Negotiation',
@@ -16,7 +17,50 @@ export const en = {
     maintenance: 'Corrective Maintenance',
     technicalConsulting: 'Technical Consulting',
     viewAll: 'View All Services',
-    learnMore: 'Learn More'
+    learnMore: 'Learn More',
+    cta: {
+      title: 'Ready to start your project?',
+      description: 'Get in touch with us to discuss your needs and discover how we can help with your telecommunications project.',
+      button: 'Get in touch'
+    },
+    features: {
+      smallCell: [
+        'Urban equipment installation',
+        'Facade implementation',
+        'Indoor coverage',
+        'Network optimization'
+      ],
+      sitesConstruction: [
+        'Greenfield Sites',
+        'Rooftop',
+        'Indoor Sites',
+        'Street Sites'
+      ],
+      locationAcquisition: [
+        'Feasibility analysis',
+        'Owner negotiation',
+        'Technical evaluation',
+        'Due diligence'
+      ],
+      licensing: [
+        'Municipal licenses',
+        'Environmental approvals',
+        'Technical documentation',
+        'Process management'
+      ],
+      maintenance: [
+        'Preventive maintenance',
+        'Failure correction',
+        'Equipment upgrade',
+        '24/7 monitoring'
+      ],
+      technicalConsulting: [
+        'Feasibility analysis',
+        'Executive projects',
+        'Technical reports',
+        'Network optimization'
+      ]
+    }
   },
 
   home: {
@@ -241,43 +285,370 @@ export const en = {
       title: 'Small Cell Installation',
       subtitle: 'Advanced solutions for mobile coverage in high-density areas',
       description: 'We offer complete small cell installation and maintenance services, significantly improving mobile network coverage and capacity in dense urban areas.',
+      overview: 'Overview',
       benefits: {
         title: 'Benefits',
         coverage: 'Coverage Improvement',
         capacity: 'Capacity Increase',
         quality: 'Signal Quality',
-        efficiency: 'Energy Efficiency'
+        efficiency: 'Energy Efficiency',
+        items: [
+          'Better coverage in dense urban areas',
+          'Network capacity optimization',
+          'Discreet installation integrated into urban landscape',
+          'Rapid implementation',
+          'Low visual impact',
+          'Ideal solution for events and high-traffic locations'
+        ]
+      },
+      applications: {
+        title: 'Applications',
+        urban: {
+          title: 'Urban Areas',
+          description: 'Ideal for commercial centers, residential areas and business districts.'
+        },
+        equipment: {
+          title: 'Urban Equipment',
+          description: 'Integration with urban furniture, poles and existing structures.'
+        },
+        indoor: {
+          title: 'Indoor Environments',
+          description: 'Coverage for shopping centers, offices and large developments.'
+        },
+        events: {
+          title: 'Events',
+          description: 'Temporary or permanent solutions for event venues.'
+        }
+      },
+      cta: {
+        title: 'Ready to improve your coverage?',
+        description: 'Contact us to discuss how our small cell solutions can benefit your project.',
+        button: 'Get in touch'
       }
     },
     
     sitesConstruction: {
       title: 'Site Construction',
       subtitle: 'Complete infrastructure for telecommunications',
-      description: 'Construction of towers, shelters, and all necessary infrastructure to support telecommunications equipment.'
+      description: 'Complete execution of telecommunications sites with technical expertise. From Greenfield Sites to Rooftop, including Indoor Sites and Street Sites.',
+      heroTitle: 'Site Construction',
+      heroSubtitle: 'Complete construction of telecommunications infrastructure with cutting-edge technology.',
+      overview: {
+        title: 'Overview',
+        description: 'Our experience in site construction covers all types of implementations, from greenfield projects to adaptations in existing structures.'
+      },
+      benefits: {
+        title: 'Benefits',
+        items: [
+          'Expertise in different types of sites',
+          'Compliance with technical standards',
+          'Highly qualified team',
+          'Complete project management',
+          'Customized solutions',
+          'Cutting-edge technology'
+        ]
+      },
+      applications: {
+        title: 'Site Types',
+        greenfield: {
+          title: 'Greenfield',
+          description: 'Complete construction of sites on new land, including foundation and infrastructure.'
+        },
+        rooftop: {
+          title: 'Rooftop',
+          description: 'Installation of sites on building rooftops with structural adaptations.'
+        },
+        indoor: {
+          title: 'Indoor Sites',
+          description: 'Implementation of indoor coverage systems in large developments.'
+        },
+        outdoor: {
+          title: 'Outdoor Sites',
+          description: 'Construction of external sites with high weather resistance.'
+        },
+        street: {
+          title: 'Street Sites',
+          description: 'Urban solutions integrated with urban furniture and poles.'
+        }
+      },
+      projects: {
+        title: 'Our Projects',
+        subtitle: 'Learn about some of our executed projects'
+      },
+      cta: {
+        title: 'Ready to build your site?',
+        description: 'Contact us to discuss your site construction project and develop the best solution.',
+        button: 'Get in touch'
+      }
     },
     
     locationAcquisition: {
       title: 'Location Search & Negotiation',
       subtitle: 'We find the best locations for your infrastructure',
-      description: 'Specialized service in identification, evaluation, and negotiation of strategic locations for telecommunications equipment installation.'
+      description: 'Specialized service in identification, evaluation, and negotiation of strategic locations for telecommunications equipment installation.',
+      heroTitle: 'Location Search & Negotiation',
+      heroSubtitle: 'Strategic identification and negotiation of locations for telecommunications infrastructure implementation.',
+      overview: {
+        title: 'Overview',
+        description: 'Our specialized location acquisition team works to identify and secure the best points for your telecommunications infrastructure. We conduct the entire process professionally, from initial analysis to contract finalization.'
+      },
+      benefits: {
+        title: 'Benefits',
+        items: [
+          'Strategic location analysis',
+          'Specialized negotiation',
+          'Complete due diligence',
+          'Documentation management',
+          'Detailed technical evaluation',
+          'Cost optimization'
+        ]
+      },
+      services: {
+        title: 'Our Services',
+        prospecting: {
+          title: 'Location Prospecting',
+          description: 'Identification and evaluation of strategic locations for infrastructure implementation.'
+        },
+        negotiation: {
+          title: 'Negotiation',
+          description: 'Professional conduct of negotiations with property owners and stakeholders.'
+        },
+        legalAnalysis: {
+          title: 'Legal Analysis',
+          description: 'Complete verification of documentation and legal status of properties.'
+        },
+        feasibility: {
+          title: 'Technical Feasibility',
+          description: 'Detailed evaluation of technical and structural conditions of the location.'
+        }
+      },
+      gallery: {
+        title: 'Location Portfolio',
+        alt1: 'Location for rooftop installation',
+        alt2: 'Rooftop site',
+        alt3: 'Rooftop installation'
+      },
+      cta: {
+        title: 'Need to find the ideal location?',
+        description: 'Get in touch to discuss your location needs and discover how we can help with your project.',
+        button: 'Get in touch'
+      }
     },
     
     licensing: {
       title: 'Licensing',
       subtitle: 'Complete support in regulatory processes',
-      description: 'Monitoring and support in all licensing processes with ANATEL and other regulatory bodies.'
+      description: 'Monitoring and support in all licensing processes with ANATEL and other regulatory bodies.',
+      heroTitle: 'Licensing',
+      heroSubtitle: 'Complete management of licensing and regularization processes for telecommunications infrastructure.',
+      overview: {
+        title: 'Overview',
+        description: 'Our licensing specialist team ensures that your infrastructure is in full compliance with current legislation. We handle the entire bureaucratic process, from documentation preparation to obtaining necessary licenses.'
+      },
+      benefits: {
+        title: 'Benefits',
+        items: [
+          'Agility in licensing processes',
+          'Compliance with legislation',
+          'Legal risk reduction',
+          'Personalized follow-up',
+          'Regulatory expertise',
+          'Complete documentation'
+        ]
+      },
+      services: {
+        title: 'Our Services',
+        municipal: {
+          title: 'Municipal Licensing',
+          description: 'Obtaining permits and licenses from city halls and municipal agencies.'
+        },
+        environmental: {
+          title: 'Environmental Licensing',
+          description: 'Process management with environmental agencies and impact studies.'
+        },
+        regularization: {
+          title: 'Regularization',
+          description: 'Regularization of existing structures and compliance with current standards.'
+        },
+        processManagement: {
+          title: 'Process Management',
+          description: 'Comprehensive monitoring of licensing processes and documentation.'
+        }
+      },
+      gallery: {
+        title: 'Licensed Projects',
+        alt1: 'Licensed rooftop site',
+        alt2: 'Site under licensing process',
+        alt3: 'Licensed project'
+      },
+      cta: {
+        title: 'Need to regularize your infrastructure?',
+        description: 'Get in touch to discuss your licensing needs and discover how we can help with your project.',
+        button: 'Get in touch'
+      }
     },
     
     maintenance: {
       title: 'Corrective Maintenance',
       subtitle: 'Specialized maintenance when you need it most',
-      description: 'Corrective maintenance services with quick response to ensure continuous operation of your infrastructure.'
+      description: 'Corrective maintenance services with quick response to ensure continuous operation of your infrastructure.',
+      heroTitle: 'Specialized Maintenance',
+      heroSubtitle: 'Complete preventive and corrective maintenance services for telecommunications infrastructure.',
+      overview: {
+        title: 'Overview',
+        description: 'Our maintenance team acts preventively and correctively to ensure the continuous operation of your telecommunications infrastructure.'
+      },
+      benefits: {
+        title: 'Benefits',
+        items: [
+          'Specialized corrective maintenance',
+          '24/7 emergency support',
+          'Specialized technical team',
+          'Detailed reports',
+          'Efficient asset management',
+          'Downtime reduction'
+        ]
+      },
+      services: {
+        title: 'Our Services',
+        preventive: {
+          title: 'Preventive Maintenance',
+          description: 'Regular inspections and scheduled maintenance to ensure optimal equipment performance.'
+        },
+        emergency: {
+          title: 'Emergency Support',
+          description: 'Quick response for fault correction and service restoration.'
+        },
+        monitoring: {
+          title: '24/7 Monitoring',
+          description: 'Continuous infrastructure monitoring for early problem detection.'
+        },
+        reports: {
+          title: 'Technical Reports',
+          description: 'Complete documentation of all maintenance activities performed.'
+        }
+      },
+      cta: {
+        title: 'Need specialized maintenance?',
+        description: 'Get in touch to learn about our maintenance plans and ensure operational continuity of your infrastructure.',
+        button: 'Get in touch'
+      }
     },
     
     technicalConsulting: {
       title: 'Technical Consulting',
       subtitle: 'Technical expertise to optimize your projects',
-      description: 'Specialized telecommunications consulting for planning, optimization, and implementation of complex projects.'
+      description: 'Specialized telecommunications consulting for planning, optimization, and implementation of complex projects.',
+      heroSubtitle: 'Specialized consulting for telecommunications projects, from conception to optimization.',
+      overview: {
+        title: 'Overview',
+        description: 'Our team of technical consultants offers specialized support to optimize your telecommunications projects. With extensive industry experience, we develop customized solutions that meet the specific needs of each client.'
+      },
+      benefits: {
+        title: 'Benefits',
+        items: [
+          'Detailed technical feasibility analysis',
+          'Customized executive projects',
+          'Network performance optimization',
+          'Specialized technical reports',
+          'Continuous technical support',
+          'Operational cost reduction'
+        ]
+      },
+      services: {
+        title: 'Our Services',
+        feasibility: {
+          title: 'Feasibility Analysis',
+          description: 'Technical studies to assess the viability of telecommunications projects.'
+        },
+        projects: {
+          title: 'Executive Projects',
+          description: 'Development of detailed technical projects for implementation.'
+        },
+        optimization: {
+          title: 'Network Optimization',
+          description: 'Analysis and optimization of telecommunications network performance.'
+        },
+        reports: {
+          title: 'Technical Reports',
+          description: 'Preparation of specialized technical reports and certifications.'
+        }
+      },
+      cta: {
+        title: 'Need specialized consulting?',
+        description: 'Get in touch to discuss your project and discover how our technical consulting can help achieve your goals.',
+        button: 'Get in touch'
+      }
+    },
+    
+    common: {
+      overview: 'Overview',
+      benefits: 'Benefits',
+      applications: 'Applications',
+      ourServices: 'Our Services'
+    }
+  },
+
+  // Additional translations for Home page content
+  homePageContent: {
+    servicesSection: {
+      description: 'We offer a complete range of specialized services in telecommunications infrastructure',
+      viewAllServices: 'View all services',
+      technicalConsulting: {
+        title: 'Technical Consulting',
+        description: 'Technical consulting for telecommunications projects, focusing on customized solutions for each client.'
+      },
+      licensing: {
+        title: 'Licensing & Search',
+        description: 'Complete support in licensing processes and location search and negotiation for infrastructure implementation.'
+      },
+      smallCell: {
+        title: 'Small Cell Installation',
+        description: 'Professional installation of small cells in various environments, ensuring coverage and performance.'
+      },
+      sitesConstruction: {
+        title: 'Site Construction',
+        description: 'Complete execution of telecommunications sites, from project to final implementation.'
+      }
+    },
+    
+    aboutSection: {
+      title: 'About us',
+      description1: 'Operating in the telecommunications market, Gávea focuses on civil and electrical construction services with extensive experience in Indoor sites, rooftop and installation of small cells in urban equipment and facades, including solution development, acquisition and licensing.',
+      description2: 'Building for Sharing companies or directly for operators, we execute more than 800 sites of all types and install more than 400 small cells, complementary technical telecommunications services such as spectrum investigation, drive test and preparation of radiometric reports, all executed with our own equipment.',
+      learnMore: 'Learn more'
+    },
+    
+    contactInfo: {
+      phone: '(21) 97198-4430',
+      email: 'contato@gaveatelecomunicacoes.com',
+      address: 'Avenida Presidente Vargas 590/1309, Rio de Janeiro',
+      hours: 'Monday - Friday 9:00 - 17:00',
+      whatsappButton: 'Contact us via WhatsApp',
+      whatsappMessage: 'Hello! I would like to get in touch.'
+    },
+    
+    contactForm: {
+      title: 'Get in touch',
+      subtitle: 'Talk to us and let\'s turn your ideas into reality',
+      name: 'Name',
+      namePlaceholder: 'Your full name',
+      email: 'Email',
+      emailPlaceholder: 'your@email.com',
+      subject: 'Subject',
+      subjectPlaceholder: 'Message subject',
+      message: 'Message',
+      messagePlaceholder: 'Type your message',
+      send: 'Get in touch'
+    },
+    
+    statsSection: {
+      title: 'Our Numbers'
+    },
+    
+    contactSection: {
+      title: 'Get in Touch',
+      subtitle: 'We are ready to meet your needs and develop the best solution for your project'
     }
   },
 
@@ -305,6 +676,7 @@ export const en = {
   footer: {
     companyInfo: 'Company Information',
     whatsapp: 'WhatsApp',
-    rights: 'All rights reserved.'
+    rights: 'All rights reserved.',
+    developedBy: 'Developed by'
   }
 };
