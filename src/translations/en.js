@@ -66,7 +66,7 @@ export const en = {
   home: {
     hero: {
       title: 'Reference in infrastructure and communications',
-      subtitle: 'Gávea focuses on civil and electrical construction services with extensive experience in Indoor sites, rooftop and installation of small cells in urban equipment and facades, including solution development, acquisition and licensing.',
+      subtitle: 'Gávea specializes in civil construction and electrical installation services for the deployment of telecommunications equipment on towers, poles, rooftops, and other urban infrastructure. Our solutions encompass everything from site acquisition and licensing to the assembly of towers and masts.',
       cta: 'Our Services',
       contact: 'Get in touch'
     },
@@ -105,7 +105,8 @@ export const en = {
     contact: {
       title: 'Get in Touch',
       subtitle: 'Ready to start your project? Our team is here to help.',
-      name: 'Name',
+      name: 'First Name',
+      surname: 'Last Name',
       email: 'Email',
       phone: 'Phone',
       message: 'Message',
@@ -199,8 +200,10 @@ export const en = {
     subtitle: 'Ready to start your project? Our team is here to help.',
     
     form: {
-      name: 'Full Name',
-      namePlaceholder: 'Enter your full name',
+      name: 'First Name',
+      namePlaceholder: 'Enter your first name',
+      surname: 'Last Name',
+      surnamePlaceholder: 'Enter your last name',
       email: 'Email',
       emailPlaceholder: 'Enter your email',
       phone: 'Phone',
@@ -241,6 +244,7 @@ export const en = {
     whatsapp: {
       title: 'WhatsApp',
       message: 'Talk to us',
+      description: 'For immediate assistance, contact us via WhatsApp!',
       floatingTooltip: 'Chat with us on WhatsApp!',
       introMessage: 'Hello! I saw your website and would like to know more about your telecommunications services.',
       banner: {
@@ -631,8 +635,10 @@ export const en = {
     contactForm: {
       title: 'Get in touch',
       subtitle: 'Talk to us and let\'s turn your ideas into reality',
-      name: 'Name',
-      namePlaceholder: 'Your full name',
+      name: 'First Name',
+      namePlaceholder: 'Your first name',
+      surname: 'Last Name',
+      surnamePlaceholder: 'Your last name',
       email: 'Email',
       emailPlaceholder: 'your@email.com',
       subject: 'Subject',

@@ -187,10 +187,7 @@ const Contact = () => {
                 {t.contact.whatsapp.title}
               </Text>
               <Text color="green.600" fontSize={{ base: 'sm', md: 'md' }}>
-                {t.isEnglish 
-                  ? "For immediate assistance, contact us via WhatsApp!"
-                  : "Para atendimento imediato, entre em contato pelo WhatsApp!"
-                }
+                {t.contact.whatsapp.description}
               </Text>
               <Button
                 as="a"
@@ -277,14 +274,14 @@ const Contact = () => {
               
               <FormControl isRequired>
                 <FormLabel color="rgba(42,82,118,255)" fontSize={{ base: 'sm', md: 'md' }}>
-                  Sobrenome
+                  {t.contact.form.surname}
                 </FormLabel>
                 <Input 
                   type="text" 
                   name="lastname"
                   value={formData.lastname}
                   onChange={handleInputChange}
-                  placeholder="Sobrenome" 
+                  placeholder={t.contact.form.surnamePlaceholder}
                   bg="white"
                   borderColor="rgba(42,82,118,0.4)"
                   _hover={{ borderColor: "rgba(42,82,118,0.6)" }}

@@ -66,7 +66,7 @@ export const pt = {
   home: {
     hero: {
       title: 'Referência em infraestrutura e comunicações',
-      subtitle: 'A Gávea foca nos serviços de construção civil e elétrica com larga experiência em sites Indoor, roof top e instalação de small cell\'s em equipamentos urbanos e fachadas, inclusive desenvolvimento de soluções, aquisição e licenciamento.',
+      subtitle: 'A Gávea é especializada em serviços de construção civil e instalações elétricas ligadas à implantação de equipamentos de telecomunicações em torres, postes, topos de edifícios e demais equipamentos urbanos. com soluções que vão desde a aquisição e licenciamento até a montagem de torres e mastros.',
       cta: 'Nossos Serviços',
       contact: 'Entre em contato'
     },
@@ -105,7 +105,8 @@ export const pt = {
     contact: {
       title: 'Entre em Contato',
       subtitle: 'Pronto para iniciar seu projeto? Nossa equipe está aqui para ajudar.',
-      name: 'Nome',
+      name: 'Primeiro Nome',
+      surname: 'Sobrenome',
       email: 'E-mail',
       phone: 'Telefone',
       message: 'Mensagem',
@@ -199,8 +200,10 @@ export const pt = {
     subtitle: 'Pronto para iniciar seu projeto? Nossa equipe está aqui para ajudar.',
     
     form: {
-      name: 'Nome Completo',
-      namePlaceholder: 'Digite seu nome completo',
+      name: 'Primeiro Nome',
+      namePlaceholder: 'Digite seu primeiro nome',
+      surname: 'Sobrenome',
+      surnamePlaceholder: 'Digite seu sobrenome',
       email: 'E-mail',
       emailPlaceholder: 'Digite seu e-mail',
       phone: 'Telefone',
@@ -241,6 +244,7 @@ export const pt = {
     whatsapp: {
       title: 'WhatsApp',
       message: 'Fale conosco',
+      description: 'Para atendimento imediato, entre em contato pelo WhatsApp!',
       floatingTooltip: 'Converse conosco no WhatsApp!',
       introMessage: 'Olá! Vi seu site e gostaria de saber mais sobre seus serviços de telecomunicações.',
       banner: {
@@ -631,8 +635,10 @@ export const pt = {
     contactForm: {
       title: 'Entre em contato',
       subtitle: 'Fale conosco e vamos transformar suas ideias em realidade',
-      name: 'Nome',
-      namePlaceholder: 'Seu nome completo',
+      name: 'Primeiro Nome',
+      namePlaceholder: 'Seu primeiro nome',
+      surname: 'Sobrenome',
+      surnamePlaceholder: 'Seu sobrenome',
       email: 'E-mail',
       emailPlaceholder: 'seu@email.com',
       subject: 'Assunto',
