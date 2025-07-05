@@ -32,12 +32,12 @@ const Maintenance = () => {
       description: t.servicePages.maintenance.services.preventive.description
     },
     {
-      title: t.servicePages.maintenance.services.emergency.title,
-      description: t.servicePages.maintenance.services.emergency.description
+      title: t.servicePages.maintenance.services.inspection.title,
+      description: t.servicePages.maintenance.services.inspection.description
     },
     {
-      title: t.servicePages.maintenance.services.monitoring.title,
-      description: t.servicePages.maintenance.services.monitoring.description
+      title: t.servicePages.maintenance.services.emergency.title,
+      description: t.servicePages.maintenance.services.emergency.description
     },
     {
       title: t.servicePages.maintenance.services.reports.title,

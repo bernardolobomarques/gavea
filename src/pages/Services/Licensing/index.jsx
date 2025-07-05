@@ -12,16 +12,12 @@ import {
   ListIcon,
   Flex,
   useColorModeValue,
-  Image,
 } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import { Link as RouterLink } from 'react-router-dom';
 import { FaFileContract, FaCheckCircle, FaArrowRight } from 'react-icons/fa';
 import { useTranslation } from '../../../hooks/useTranslation';
 import torre2 from '../../../assets/torre2.png';
-import rooftop4 from '../../../assets/rooftop4.jpeg';
-import rooftop5 from '../../../assets/rooftop5.jpg';
-import rooftop6 from '../../../assets/rooftop6.jpg';
 
 const MotionBox = motion(Box);
 
@@ -145,63 +141,6 @@ const Licensing = () => {
                     </VStack>
                   </MotionBox>
                 ))}
-              </SimpleGrid>
-            </VStack>
-
-            {/* Project Gallery */}
-            <VStack spacing={6} align="stretch" w="full">
-              <Heading size="lg" color="rgba(42,82,118,1)">
-                {t.servicePages.licensing.gallery.title}
-              </Heading>
-              <SimpleGrid columns={{ base: 1, md: 3 }} spacing={8}>
-                <Box
-                  h="250px"
-                  borderRadius="lg"
-                  overflow="hidden"
-                  shadow="xl"
-                >
-                  <Image
-                    src={rooftop4}
-                    alt={t.servicePages.licensing.gallery.alt1}
-                    w="100%"
-                    h="100%"
-                    objectFit="cover"
-                    transition="transform 0.3s ease"
-                    _hover={{ transform: 'scale(1.05)' }}
-                  />
-                </Box>
-                <Box
-                  h="250px"
-                  borderRadius="lg"
-                  overflow="hidden"
-                  shadow="xl"
-                >
-                  <Image
-                    src={rooftop5}
-                    alt={t.servicePages.licensing.gallery.alt2}
-                    w="100%"
-                    h="100%"
-                    objectFit="cover"
-                    transition="transform 0.3s ease"
-                    _hover={{ transform: 'scale(1.05)' }}
-                  />
-                </Box>
-                <Box
-                  h="250px"
-                  borderRadius="lg"
-                  overflow="hidden"
-                  shadow="xl"
-                >
-                  <Image
-                    src={rooftop6}
-                    alt={t.servicePages.licensing.gallery.alt3}
-                    w="100%"
-                    h="100%"
-                    objectFit="cover"
-                    transition="transform 0.3s ease"
-                    _hover={{ transform: 'scale(1.05)' }}
-                  />
-                </Box>
               </SimpleGrid>
             </VStack>
 

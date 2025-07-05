@@ -102,44 +102,44 @@ const Services = () => {
   const services = [
     {
       icon: FaWifi,
-      title: t('services.smallCell'),
-      description: t('servicePages.smallCell.description'),
-      features: t('services.features.smallCell'),
+      title: t.services.smallCell,
+      description: t.servicePages.smallCell.description,
+      features: t.services.features.smallCell,
       path: '/services/small-cell'
     },
     {
       icon: FaBroadcastTower,
-      title: t('services.sitesConstruction'),
-      description: t('servicePages.sitesConstruction.description'),
-      features: t('services.features.sitesConstruction'),
+      title: t.services.sitesConstruction,
+      description: t.servicePages.sitesConstruction.description,
+      features: t.services.features.sitesConstruction,
       path: '/services/sites-construction'
     },
     {
       icon: FaSearchLocation,
-      title: t('services.locationAcquisition'),
-      description: t('servicePages.locationAcquisition.description'),
-      features: t('services.features.locationAcquisition'),
+      title: t.services.locationAcquisition,
+      description: t.servicePages.locationAcquisition.description,
+      features: t.services.features.locationAcquisition,
       path: '/services/location-acquisition'
     },
     {
       icon: FaFileContract,
-      title: t('services.licensing'),
-      description: t('servicePages.licensing.description'),
-      features: t('services.features.licensing'),
+      title: t.services.licensing,
+      description: t.servicePages.licensing.description,
+      features: t.services.features.licensing,
       path: '/services/licensing'
     },
     {
       icon: FaTools,
-      title: t('services.maintenance'),
-      description: t('servicePages.maintenance.description'),
-      features: t('services.features.maintenance'),
+      title: t.services.maintenance,
+      description: t.servicePages.maintenance.description,
+      features: t.services.features.maintenance,
       path: '/services/maintenance'
     },
     {
       icon: FaChartLine,
-      title: t('services.technicalConsulting'),
-      description: t('servicePages.technicalConsulting.description'),
-      features: t('services.features.technicalConsulting'),
+      title: t.services.technicalConsulting,
+      description: t.servicePages.technicalConsulting.description,
+      features: t.services.features.technicalConsulting,
       path: '/services/technical-consulting'
     },
   ];
@@ -174,10 +174,10 @@ const Services = () => {
               size="2xl"
               maxW="800px"
             >
-              {t('services.title')}
+              {t.services.title}
             </Heading>
             <Text fontSize="xl" maxW="700px">
-              {t('services.subtitle')}
+              {t.services.subtitle}
             </Text>
           </VStack>
         </Container>
@@ -198,10 +198,10 @@ const Services = () => {
             <Box textAlign="center" py={10}>
               <VStack spacing={6}>
                 <Heading size="lg" color="rgba(42,82,118,1)">
-                  {t('services.cta.title')}
+                  {t.services.cta.title}
                 </Heading>
                 <Text fontSize="lg" color="gray.600" maxW="700px">
-                  {t('services.cta.description')}
+                  {t.services.cta.description}
                 </Text>
                 <Button
                   as={RouterLink}
@@ -216,7 +216,7 @@ const Services = () => {
                   }}
                   transition="all 0.3s"
                 >
-                  {t('services.cta.button')}
+                  {t.services.cta.button}
                 </Button>
               </VStack>
             </Box>

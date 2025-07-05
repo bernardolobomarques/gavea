@@ -17,9 +17,9 @@ const Footer = () => {
           <VStack align={{ base: 'center', md: 'flex-start' }} spacing={2}>
             <Text fontWeight="bold" fontSize={{ base: 'md', md: 'lg' }}>{t.footer.companyInfo}</Text>
             <Text fontSize={{ base: 'sm', md: 'md' }}>Gávea Telecomunicações Ltda.</Text>
-            <Text fontSize={{ base: 'sm', md: 'md' }}>Avenida Presidente Vargas 590/1309</Text>
-            <Text fontSize={{ base: 'sm', md: 'md' }}>Rio de Janeiro</Text>
-            <Text fontSize={{ base: 'sm', md: 'md' }}>CEP: 20071-000</Text>
+            <Text fontSize={{ base: 'sm', md: 'md' }}>Av. Érico Veríssimo 855, sala 301</Text>
+            <Text fontSize={{ base: 'sm', md: 'md' }}>Barra da Tijuca – Rio de Janeiro</Text>
+            <Text fontSize={{ base: 'sm', md: 'md' }}>CEP: 22611-180</Text>
             <Text fontSize={{ base: 'sm', md: 'md' }}>CNPJ: 17607948/0001-02</Text>
           </VStack>
 
@@ -36,9 +36,10 @@ const Footer = () => {
           <Text fontSize="xs">
             {t.footer.developedBy}{' '}
             <Link
-              href="#"
+              href="https://linkedin.com/in/bernardo-lobo/"
               fontWeight="bold"
               _hover={{ textDecoration: 'underline' }}
+              isExternal
             >
               Bernardo Lobo Marques
             </Link>

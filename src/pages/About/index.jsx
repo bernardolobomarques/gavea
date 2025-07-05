@@ -59,24 +59,24 @@ const About = () => {
   
   const activities = [
     {
-      icon: FaBuilding,
-      title: t.about.activities.infrastructure.title,
-      description: t.about.activities.infrastructure.description
-    },
-    {
       icon: FaCalendarCheck,
       title: t.about.activities.acquisition.title,
       description: t.about.activities.acquisition.description
     },
     {
-      icon: FaSignal,
-      title: t.about.activities.smallCells.title,
-      description: t.about.activities.smallCells.description
-    },
-    {
       icon: FaHammer,
       title: t.about.activities.consulting.title,
       description: t.about.activities.consulting.description
+    },
+    {
+      icon: FaBuilding,
+      title: t.about.activities.infrastructure.title,
+      description: t.about.activities.infrastructure.description
+    },
+    {
+      icon: FaSignal,
+      title: t.about.activities.smallCells.title,
+      description: t.about.activities.smallCells.description
     }
   ];
 

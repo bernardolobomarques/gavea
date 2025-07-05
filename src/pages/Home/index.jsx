@@ -561,7 +561,7 @@ const Home = () => {
 
                 <Box w="100%" h="300px" borderRadius="lg" overflow="hidden" shadow="lg">
                   <iframe
-                    src="https://maps.google.com/maps?q=Avenida%20Presidente%20Vargas%20590%201309%2C%20Rio%20de%20Janeiro&t=m&z=18&output=embed&iwloc=near"
+                    src="https://maps.google.com/maps?q=Av.%20Érico%20Veríssimo%20855,%20sala%20301%20Barra%20da%20Tijuca%20Rio%20de%20Janeiro&t=m&z=18&output=embed&iwloc=near"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}

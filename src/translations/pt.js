@@ -128,17 +128,17 @@ export const pt = {
   },
 
   about: {
-    title: 'Sobre a Gavea Telecom',
-    subtitle: 'Fundada em 2013, somos líderes em infraestrutura de telecomunicações, com mais de 1000 projetos realizados em todo o Brasil.',
+    title: 'Sobre Nós',
+    subtitle: 'Somos especialistas em implantação de infraestrutura de telecomunicações atuando em todo Brasil',
     
     intro: {
       title: 'Nossa História',
-      description: 'Fundada em 20 de fevereiro de 2013, a Gávea Telecomunicações é uma empresa líder no setor de telecomunicações, com sede na Barra da Tijuca, Rio de Janeiro – RJ. Nosso compromisso é construir e manter infraestruturas de comunicação confiáveis, conectando pessoas e empresas em todo o Brasil.'
+      description: 'Com sede na Barra da Tijuca, Rio de Janeiro, a Gávea foi fundada em fevereiro de 2013 para ser uma referência no setor de infraestrutura para telecomunicações no Brasil. Nosso compromisso é implantar infraestruturas confiáveis, ajudando a conectar pessoas e empresas em todo o país.'
     },
 
     mission: {
       title: 'Nossa Missão',
-      description: 'Com mais de 1000 projetos realizados, nossa experiência abrange desde a construção de estações e redes de telecomunicações até a manutenção de infraestrutura de sites. Cada projeto é um marco em nossa jornada de conectar o futuro.'
+      description: 'A Gávea tem mais de 1000 projetos realizados, e nossa experiência abrange desde a construção de estações e redes de telecomunicações até a manutenção de infraestrutura de sites. Cada projeto é um marco em nossa jornada para conectar o hoje ao futuro.'
     },
 
     vision: {
@@ -168,29 +168,21 @@ export const pt = {
 
     activities: {
       title: 'Nossas atividades',
-      smallCells: {
-        title: 'Diversos Tipos de Sites',
-        description: 'Desde Greenfield até Rooftop, passando por Biosite, Small Cell, Street Site, Indoor e Outdoor.'
-      },
-      infrastructure: {
-        title: 'Construção de Estações e Redes',
-        description: 'Desenvolvemos projetos robustos para garantir conectividade em áreas urbanas e rurais.'
+      acquisition: {
+        title: 'Aquisição e Licenciamento',
+        description: 'Identificamos locais estratégicos e gerenciamos todo o processo de licenciamento para expandir nossa rede.'
       },
       consulting: {
         title: 'Engenharia Especializada',
-        description: 'Nossa equipe oferece projetos executivos, estruturais e laudos técnicos.'
+        description: 'Nossa equipe oferece projetos executivos, estruturais e laudos técnicos especializados.'
       },
-      licensing: {
-        title: 'Licenciamento',
-        description: 'Suporte completo em processos de licenciamento junto aos órgãos reguladores.'
+      infrastructure: {
+        title: 'Implantação de Infraestrutura',
+        description: 'Executamos toda infraestrutura do site "full turn key" - projetos completos de implantação.'
       },
-      maintenance: {
-        title: 'Manutenção',
-        description: 'Serviços de manutenção preventiva e corretiva em equipamentos e infraestrutura.'
-      },
-      acquisition: {
-        title: 'Aquisição e Licenciamento',
-        description: 'Identificamos locais estratégicos para expandir nossa rede.'
+      smallCells: {
+        title: 'Diversos Tipos de Sites',
+        description: 'Desde Greenfield até Rooftop, passando por Small Cell, Street Site, Indoor e Outdoor.'
       }
     }
   },
@@ -225,7 +217,7 @@ export const pt = {
       title: 'Informações de Contato',
       address: {
         label: 'Endereço',
-        value: 'Avenida Presidente Vargas 590/1309, Rio de Janeiro'
+        value: 'Av. Érico Veríssimo 855, sala 301 Barra da Tijuca – Rio de Janeiro CEP: 22611-180'
       },
       phone: {
         label: 'Telefone',
@@ -288,7 +280,7 @@ export const pt = {
     smallCell: {
       title: 'Instalação de Small Cell',
       subtitle: 'Soluções avançadas para cobertura móvel em áreas de alta densidade',
-      description: 'Nossa expertise em instalação de small cells abrange desde a análise inicial do local até a implementação e otimização final. Trabalhamos com as mais recentes tecnologias e métodos de instalação, garantindo cobertura eficiente e integração harmoniosa com o ambiente urbano.',
+      description: 'Nossa expertise em instalação de small cells abrange desde a busca de um local ideal para a implantação até o desenvolvimento e execução de uma solução técnica adequada e harmonizada com a paisagem urbana, utilizando os mais atuais tecnologias e métodos de instalação, garantindo uma solução eficiente aos nossos Clientes.',
       overview: 'Visão Geral',
       benefits: {
         title: 'Benefícios',
@@ -298,11 +290,12 @@ export const pt = {
         efficiency: 'Eficiência Energética',
         items: [
           'Melhor cobertura em áreas urbanas densas',
-          'Otimização da capacidade de rede',
-          'Instalação discreta e integrada à paisagem urbana',
           'Rápida implementação',
+          'Solução ideal para eventos e locais com alto tráfego',
+          'Otimização da capacidade de rede',
           'Baixo impacto visual',
-          'Solução ideal para eventos e locais com alto tráfego'
+          'Baixo impacto visual, integrado à paisagem urbana',
+          'Solução ideal para locais com alto tráfego'
         ]
       },
       applications: {
@@ -336,10 +329,10 @@ export const pt = {
       subtitle: 'Infraestrutura completa para telecomunicações',
       description: 'Execução completa de sites de telecomunicações com expertise técnica. Desde Sites Greenfield até Rooftop, passando por Sites Indoor e Street Sites.',
       heroTitle: 'Construção de Sites',
-      heroSubtitle: 'Construção completa de infraestrutura para telecomunicações com tecnologia de ponta.',
+      heroSubtitle: 'Soluções completas de infraestruturas para telecomunicações.',
       overview: {
         title: 'Visão Geral',
-        description: 'Nossa experiência em construção de sites abrange todos os tipos de implementações, desde projetos greenfield até adaptações em estruturas existentes.'
+        description: 'Nossa experiência em construção de sites abrange todos os tipos de implantações, desde projetos Greenfield até adaptações em estruturas existentes.'
       },
       benefits: {
         title: 'Benefícios',
@@ -356,7 +349,7 @@ export const pt = {
         title: 'Tipos de Sites',
         greenfield: {
           title: 'Greenfield',
-          description: 'Construção completa de sites em terrenos novos, incluindo fundação e infraestrutura.'
+          description: 'Construção completa de sites em terrenos novos, incluindo fundação , infraestrutura civil e elétrica e montagens de estruturas verticais.'
         },
         rooftop: {
           title: 'Rooftop',
@@ -365,10 +358,6 @@ export const pt = {
         indoor: {
           title: 'Sites Indoor',
           description: 'Implementação de sistemas de cobertura interna em grandes empreendimentos.'
-        },
-        outdoor: {
-          title: 'Sites Outdoor',
-          description: 'Construção de sites externos com alta resistência a intempéries.'
         },
         street: {
           title: 'Street Sites',
@@ -391,7 +380,7 @@ export const pt = {
       subtitle: 'Encontramos os melhores locais para sua infraestrutura',
       description: 'Identificação e aquisição estratégica de locais para implementação. Análise de viabilidade, negociação com proprietários, avaliação técnica e due diligence.',
       heroTitle: 'Busca e Negociação de Locais',
-      heroSubtitle: 'Identificação e negociação estratégica de locais para implementação de infraestrutura de telecomunicações.',
+      heroSubtitle: 'Identificação e negociação estratégia de locais para implantação de infraestrutura de telecomunicações',
       overview: {
         title: 'Visão Geral',
         description: 'Nossa equipe especializada em aquisição de locais trabalha para identificar e garantir os melhores pontos para sua infraestrutura de telecomunicações. Realizamos todo o processo de forma profissional, desde a análise inicial até a finalização do contrato.'
@@ -495,37 +484,35 @@ export const pt = {
     maintenance: {
       title: 'Manutenção Corretiva',
       subtitle: 'Manutenção especializada quando você mais precisa',
-      description: 'Serviços de manutenção preventiva e corretiva em infraestruturas. Manutenção preventiva, correção de falhas, upgrade de equipamentos e monitoramento 24/7.',
+      description: 'Serviços completos de manutenção corretiva para infraestrutura de telecomunicações',
       heroTitle: 'Manutenção Especializada',
       heroSubtitle: 'Serviços completos de manutenção preventiva e corretiva para infraestrutura de telecomunicações.',
       overview: {
         title: 'Visão Geral',
-        description: 'Nossa equipe de manutenção atua de forma preventiva e corretiva para garantir o funcionamento contínuo de sua infraestrutura de telecomunicações.'
+        description: 'Nossa equipe de manutenção atua de forma a garantir a operacionalidade de sua infraestrutura de telecomunicações para o funcionamento contínuo dos equipamentos nela instalados.'
       },
       benefits: {
         title: 'Benefícios',
         items: [
           'Manutenção corretiva especializada',
-          'Atendimento 24/7 para emergências',
-          'Equipe técnica especializada',
           'Relatórios detalhados',
           'Gestão de ativos eficiente',
-          'Redução de downtime'
+          'Manutenção corretiva com equipe técnica especializada'
         ]
       },
       services: {
         title: 'Nossos Serviços',
         preventive: {
-          title: 'Manutenção Preventiva',
-          description: 'Inspeções regulares e manutenção programada para garantir o funcionamento ideal dos equipamentos.'
+          title: 'Manutenção Corretiva',
+          description: 'Manutenção programada para garantir o funcionamento dos equipamentos.'
+        },
+        inspection: {
+          title: 'Vistoria Preventiva',
+          description: 'Inspeção de infraestrutura para detecção prévia de problemas.'
         },
         emergency: {
           title: 'Atendimento Emergencial',
           description: 'Pronto atendimento para correção de falhas e restauração de serviços.'
-        },
-        monitoring: {
-          title: 'Monitoramento 24/7',
-          description: 'Monitoramento contínuo da infraestrutura para detecção prévia de problemas.'
         },
         reports: {
           title: 'Relatórios Técnicos',
@@ -553,7 +540,6 @@ export const pt = {
         items: [
           'Análise detalhada de viabilidade técnica',
           'Projetos executivos customizados',
-          'Otimização de performance da rede',
           'Laudos técnicos especializados',
           'Suporte técnico contínuo',
           'Redução de custos operacionais'
@@ -626,7 +612,7 @@ export const pt = {
     contactInfo: {
       phone: '(21) 97198-4430',
       email: 'contato@gaveatelecomunicacoes.com',
-      address: 'Avenida Presidente Vargas 590/1309, Rio de Janeiro',
+      address: 'Av. Érico Veríssimo 855, sala 301 Barra da Tijuca – Rio de Janeiro CEP: 22611-180',
       hours: 'Segunda - Sexta 9:00 - 17:00',
       whatsappButton: 'Fale conosco pelo WhatsApp',
       whatsappMessage: 'Olá! Gostaria de entrar em contato.'

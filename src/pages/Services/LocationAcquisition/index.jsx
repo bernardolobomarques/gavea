@@ -12,16 +12,12 @@ import {
   ListIcon,
   Flex,
   useColorModeValue,
-  Image,
 } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import { Link as RouterLink } from 'react-router-dom';
 import { FaSearchLocation, FaCheckCircle, FaArrowRight } from 'react-icons/fa';
 import { useTranslation } from '../../../hooks/useTranslation';
 import torre2 from '../../../assets/torre2.png';
-import rooftop1 from '../../../assets/rooftop1.JPG';
-import rooftop2 from '../../../assets/rooftop2.jpg';
-import rooftop3 from '../../../assets/rooftop3.jpeg';
 
 const MotionBox = motion(Box);
 
@@ -145,63 +141,6 @@ const LocationAcquisition = () => {
                     </VStack>
                   </MotionBox>
                 ))}
-              </SimpleGrid>
-            </VStack>
-
-            {/* Location Gallery */}
-            <VStack spacing={6} align="stretch" w="full">
-              <Heading size="lg" color="rgba(42,82,118,1)">
-                {t.servicePages.locationAcquisition.gallery.title}
-              </Heading>
-              <SimpleGrid columns={{ base: 1, md: 3 }} spacing={8}>
-                <Box
-                  h="250px"
-                  borderRadius="lg"
-                  overflow="hidden"
-                  shadow="xl"
-                >
-                  <Image
-                    src={rooftop1}
-                    alt={t.servicePages.locationAcquisition.gallery.alt1}
-                    w="100%"
-                    h="100%"
-                    objectFit="cover"
-                    transition="transform 0.3s ease"
-                    _hover={{ transform: 'scale(1.05)' }}
-                  />
-                </Box>
-                <Box
-                  h="250px"
-                  borderRadius="lg"
-                  overflow="hidden"
-                  shadow="xl"
-                >
-                  <Image
-                    src={rooftop2}
-                    alt={t.servicePages.locationAcquisition.gallery.alt2}
-                    w="100%"
-                    h="100%"
-                    objectFit="cover"
-                    transition="transform 0.3s ease"
-                    _hover={{ transform: 'scale(1.05)' }}
-                  />
-                </Box>
-                <Box
-                  h="250px"
-                  borderRadius="lg"
-                  overflow="hidden"
-                  shadow="xl"
-                >
-                  <Image
-                    src={rooftop3}
-                    alt={t.servicePages.locationAcquisition.gallery.alt3}
-                    w="100%"
-                    h="100%"
-                    objectFit="cover"
-                    transition="transform 0.3s ease"
-                    _hover={{ transform: 'scale(1.05)' }}
-                  />
-                </Box>
               </SimpleGrid>
             </VStack>
 

@@ -45,10 +45,6 @@ const SitesConstruction = () => {
       description: t.servicePages.sitesConstruction.applications.indoor.description
     },
     {
-      title: t.servicePages.sitesConstruction.applications.outdoor.title,
-      description: t.servicePages.sitesConstruction.applications.outdoor.description
-    },
-    {
       title: t.servicePages.sitesConstruction.applications.street.title,
       description: t.servicePages.sitesConstruction.applications.street.description
     }

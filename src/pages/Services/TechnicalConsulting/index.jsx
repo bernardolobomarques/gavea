@@ -39,10 +39,6 @@ const TechnicalConsulting = () => {
     {
       title: t.servicePages.technicalConsulting.services.reports.title,
       description: t.servicePages.technicalConsulting.services.reports.description
-    },
-    {
-      title: t.servicePages.technicalConsulting.services.optimization.title,
-      description: t.servicePages.technicalConsulting.services.optimization.description
     }
   ];
 
