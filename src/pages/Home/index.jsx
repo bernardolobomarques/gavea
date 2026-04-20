@@ -2,8 +2,8 @@ import { Box, Button, Container, Flex, Grid, Heading, Icon, Image, SimpleGrid, S
 import { FaBuilding, FaBroadcastTower, FaUserCheck, FaUsers, FaUserTie, FaClipboardCheck, FaWifi, FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock, FaWhatsapp, FaArrowRight } from 'react-icons/fa';
 import { Link as RouterLink } from 'react-router-dom';
 import { useState, useEffect, useRef } from 'react';
-import torreHome from '../../assets/torreHome.png';
-import torre1 from '../../assets/torre1.jpg';
+import torreHome from '../../assets/torreHome.jpg';
+import torre1 from '../../assets/torre1.png';
 import { useTranslation } from '../../hooks/useTranslation';
 
 const useInView = (options = {}) => {
