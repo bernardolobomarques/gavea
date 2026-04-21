@@ -60,7 +60,7 @@ const TechnicalConsulting = () => {
           w="full"
           h="full"
           bgImage={`url(${torre2})`}
-          bgPosition="center"
+          bgPosition="75% center"
           bgSize="cover"
           bgRepeat="no-repeat"
           filter="brightness(0.7)"

@@ -1,4 +1,4 @@
-import { Box, Button, Container, Flex, Grid, Heading, Icon, Image, SimpleGrid, Stack, Stat, StatLabel, StatNumber, Text, VStack, useColorModeValue, FormControl, FormLabel, Input, Textarea, useToast } from '@chakra-ui/react';
+import { Box, Button, Container, Flex, Grid, Heading, Icon, Image, SimpleGrid, Stack, Stat, StatLabel, StatNumber, Text, VStack, useColorModeValue, FormControl, FormLabel, Input, Textarea, useToast, useBreakpointValue } from '@chakra-ui/react';
 import { FaBuilding, FaBroadcastTower, FaUserCheck, FaUsers, FaUserTie, FaClipboardCheck, FaWifi, FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock, FaWhatsapp, FaArrowRight } from 'react-icons/fa';
 import { Link as RouterLink } from 'react-router-dom';
 import { useState, useEffect, useRef } from 'react';
@@ -185,6 +185,7 @@ const Home = () => {
   const toast = useToast();
   const [scrollY, setScrollY] = useState(0);
   const { t } = useTranslation();
+  const isMobile = useBreakpointValue({ base: true, md: false });
 
   useEffect(() => {
     const handleScroll = () => {
@@ -197,18 +198,30 @@ const Home = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const formData = new FormData(e.target);
+    
     try {
-      toast({
-        title: t.home.contact.success,
-        description: 'Entraremos em contato em breve.',
-        status: 'success',
-        duration: 5000,
-        isClosable: true,
+      const response = await fetch('/send_email.php', {
+        method: 'POST',
+        body: formData
       });
+
+      if (response.ok) {
+        toast({
+          title: t.home.contact.success,
+          description: 'Entraremos em contato em breve.',
+          status: 'success',
+          duration: 5000,
+          isClosable: true,
+        });
+        e.target.reset(); // clear the form  
+      } else {
+        throw new Error('Server error');
+      }
     } catch (error) {
       toast({
         title: t.common.error,
-        description: t.home.contact.error,
+        description: t.home.contact.error || 'Não foi possível enviar a mensagem.',
         status: 'error',
         duration: 5000,
         isClosable: true,
@@ -233,13 +246,13 @@ const Home = () => {
           w="full"
           h="140%"
           bgImage={`url(${torreHome})`}
-          bgPosition="center"
-          bgSize="160%" 
+          bgPosition={isMobile ? "65% center" : "center"}
+          bgSize={isMobile ? "cover" : "160%"} 
           bgRepeat="no-repeat"
           transformOrigin="center"
           zIndex={-1}
           style={{
-            transform: `scale(1.1) translateY(${scrollY * 0.15}px)`,
+            transform: `scale(1.1) translateY(${scrollY * (isMobile ? 0.08 : 0.15)}px)`,
             transition: 'transform 0.1s ease-out',
             willChange: 'transform'
           }}
@@ -599,6 +612,7 @@ const Home = () => {
                   <FormControl isRequired>
                     <FormLabel color="rgba(42,82,118,1)">{t.homePageContent.contactForm.name}</FormLabel>
                     <Input 
+                      name="name"
                       placeholder={t.homePageContent.contactForm.namePlaceholder}
                       bg="white"
                       borderColor="rgba(42,82,118,0.4)"
@@ -610,6 +624,7 @@ const Home = () => {
                     <FormLabel color="rgba(42,82,118,1)">{t.homePageContent.contactForm.email}</FormLabel>
                     <Input 
                       type="email"
+                      name="email"
                       placeholder={t.homePageContent.contactForm.emailPlaceholder}
                       bg="white"
                       borderColor="rgba(42,82,118,0.4)"
@@ -620,6 +635,7 @@ const Home = () => {
                   <FormControl isRequired>
                     <FormLabel color="rgba(42,82,118,1)">{t.homePageContent.contactForm.subject}</FormLabel>
                     <Input 
+                      name="subject"
                       placeholder={t.homePageContent.contactForm.subjectPlaceholder}
                       bg="white"
                       borderColor="rgba(42,82,118,0.4)"
@@ -630,6 +646,7 @@ const Home = () => {
                   <FormControl isRequired>
                     <FormLabel color="rgba(42,82,118,1)">{t.homePageContent.contactForm.message}</FormLabel>
                     <Textarea 
+                      name="message"
                       placeholder={t.homePageContent.contactForm.messagePlaceholder}
                       rows={4}
                       bg="white"

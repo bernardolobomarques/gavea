@@ -18,8 +18,7 @@ import { motion } from 'framer-motion';
 import { Link as RouterLink } from 'react-router-dom';
 import { FaWifi, FaCheckCircle, FaArrowRight } from 'react-icons/fa';
 import torre2 from '../../../assets/torre2.png';
-import infraestrutura1 from '../../../assets/infraestrutura1.jpg';
-import infraestrutura2 from '../../../assets/infraestrutura2.jpg';
+import small_cell from '../../../assets/small_cell.jpeg';
 import { useTranslation } from '../../../hooks/useTranslation';
 
 const MotionBox = motion(Box);
@@ -66,7 +65,7 @@ const SmallCell = () => {
           w="full"
           h="full"
           bgImage={`url(${torre2})`}
-          bgPosition="center"
+          bgPosition="75% center"
           bgSize="cover"
           bgRepeat="no-repeat"
           filter="brightness(0.7)"
@@ -147,41 +146,24 @@ const SmallCell = () => {
               </SimpleGrid>
             </VStack>
 
-            {/* Image Gallery */}
-            <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8} w="full">
-              <Box
-                h="300px"
-                borderRadius="lg"
-                overflow="hidden"
-                shadow="xl"
-              >
-                <Image
-                  src={infraestrutura1}
-                  alt="Instalação de Small Cell em infraestrutura urbana"
-                  w="100%"
-                  h="100%"
-                  objectFit="cover"
-                  transition="transform 0.3s ease"
-                  _hover={{ transform: 'scale(1.05)' }}
-                />
-              </Box>
-              <Box
-                h="300px"
-                borderRadius="lg"
-                overflow="hidden"
-                shadow="xl"
-              >
-                <Image
-                  src={infraestrutura2}
-                  alt="Instalação de Small Cell em equipamento urbano"
-                  w="100%"
-                  h="100%"
-                  objectFit="cover"
-                  transition="transform 0.3s ease"
-                  _hover={{ transform: 'scale(1.05)' }}
-                />
-              </Box>
-            </SimpleGrid>
+            {/* Image Section */}
+            <Box
+              h={{ base: '300px', md: '500px' }}
+              w="full"
+              borderRadius="lg"
+              overflow="hidden"
+              shadow="xl"
+            >
+              <Image
+                src={small_cell}
+                alt="Instalação de Small Cell"
+                w="100%"
+                h="100%"
+                objectFit="cover"
+                transition="transform 0.3s ease"
+                _hover={{ transform: 'scale(1.02)' }}
+              />
+            </Box>
 
             {/* Call to Action */}
             <Box

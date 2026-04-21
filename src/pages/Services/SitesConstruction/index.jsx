@@ -68,7 +68,7 @@ const SitesConstruction = () => {
           w="full"
           h="full"
           bgImage={`url(${torre2})`}
-          bgPosition="center"
+          bgPosition="75% center"
           bgSize="cover"
           bgRepeat="no-repeat"
           filter="brightness(0.7)"
@@ -201,6 +201,7 @@ const SitesConstruction = () => {
                     w="100%"
                     h="100%"
                     objectFit="cover"
+                    objectPosition="center 30%"
                     transition="transform 0.3s ease"
                     _hover={{ transform: 'scale(1.05)' }}
                   />
@@ -217,6 +218,7 @@ const SitesConstruction = () => {
                     w="100%"
                     h="100%"
                     objectFit="cover"
+                    objectPosition="center 30%"
                     transition="transform 0.3s ease"
                     _hover={{ transform: 'scale(1.05)' }}
                   />

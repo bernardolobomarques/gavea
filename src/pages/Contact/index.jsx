@@ -53,23 +53,20 @@ const Contact = () => {
         throw new Error('Spam detected');
       }
 
-      const response = await fetch('/backend/contact.php', {
+      const submitData = new FormData();
+      submitData.append('name', formData.name + ' ' + formData.lastname);
+      submitData.append('email', formData.email);
+      submitData.append('subject', formData.subject);
+      submitData.append('message', formData.message);
+
+      const response = await fetch('/send_email.php', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          lastname: formData.lastname,
-          email: formData.email,
-          subject: formData.subject,
-          message: formData.message
-        })
+        body: submitData
       });
 
       const data = await response.json();
 
-      if (response.ok && data.success) {
+      if (response.ok && data.status === 'success') {
         toast({
           title: t.isEnglish ? 'Success!' : 'Sucesso!',
           description: t.isEnglish 
