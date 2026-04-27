@@ -1,7 +1,7 @@
 import { Container, Heading, Text, VStack, Image, SimpleGrid, Box, Icon, Flex, useColorModeValue } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import { FaUserShield, FaCalendarCheck, FaUserTie, FaThumbsUp, FaLightbulb, FaBuilding, FaSignal, FaHammer, FaNetworkWired, FaBuilding as FaBuildingIcon, FaLeaf } from 'react-icons/fa';
-import logoGavea from '../../assets/logoGavea.png';
+import colaborador from '../../assets/colaborador.webp';
 import torre2 from '../../assets/torre2.png';
 import { useTranslation } from '../../hooks/useTranslation';
 
@@ -216,7 +216,7 @@ const About = () => {
                   transition={{ duration: 0.5 }}
                 >
                   <Image 
-                    src="https://gaveatelecom.com/wp-content/uploads/2024/05/eng-std.webp" 
+                    src={colaborador}
                     alt="Colaboradores Gávea"
                     borderRadius="lg"
                     shadow="xl"
