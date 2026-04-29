@@ -65,7 +65,7 @@ export const pt = {
 
   home: {
     hero: {
-      title: 'Referência em infraestrutura e comunicações',
+      title: 'Referência em infraestrutura e telecomunicações',
       subtitle: 'A Gávea é especializada em serviços de construção civil e instalações elétricas ligadas à implantação de equipamentos de telecomunicações em torres, postes, topos de edifícios e demais equipamentos urbanos. com soluções que vão desde a aquisição e licenciamento até a montagem de torres e mastros.',
       cta: 'Nossos Serviços',
       contact: 'Entre em contato'
